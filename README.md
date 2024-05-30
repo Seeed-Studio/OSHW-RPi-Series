@@ -416,8 +416,79 @@ Once you identify the entry corresponding to your SSD, you can proceed with part
 
 > [!NOTE]
 > There are two main uses for SSD cards:<br />
-- High Capacity Storage: SSD cards can be utilized for high-capacity storage needs.<br />
-- Boot Drive with Image: Another usage involves using the SSD both as a high-capacity storage and for storing system images, allowing booting directly from the SSD card.<br />
-- It's important to note that not all SSD cards available in the market support the second usage. Therefore, if you intend to use it as a boot drive and are unsure about which model to purchase, we recommend opting for our recommended 1TB SSD(SKU 112990267). This model has been tested and verified for boot functionality, reducing the risk of compatibility issues and minimizing trial and error costs.
+>- High Capacity Storage: SSD cards can be utilized for high-capacity storage needs.<br />
+>- Boot Drive with Image: Another usage involves using the SSD both as a high-capacity storage and for storing system images, allowing booting directly from the SSD card.<br />
+>- It's important to note that not all SSD cards available in the market support the second usage. Therefore, if you intend to use it as a boot drive and are unsure about which model to purchase, we recommend opting for our recommended 1TB SSD(SKU 112990267). This model has been tested and verified for boot functionality, reducing the risk of compatibility issues and minimizing trial and error costs.
 
+### Mini-PCle Slot
+<div style="text-align: center;">
+  <table style="margin: auto;">
+    <thead>
+      <tr>
+        <th>Slot</th>
+        <th>Supported Protocol</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mini-PCIe 1</td>
+        <td>4G LTE</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>USB LoRa®</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>USB Zigbee</td>
+      </tr>
+      <tr>
+        <td>Mini-PCIe 2</td>
+        <td>SPI LoRa®</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>USB LoRa®</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>USB Zigbee</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+This device features two Mini-PCIe interfaces, namely Mini-PCIe Slot 1 and Mini-PCIe Slot 2. Slot 1 connects to SIM card slot and supports USB protocols, while Slot 2 supports both USB and SPI protocols but doesn't connect to SIM card slot. Therefore, devices such as 4G LTE, USB LoRa®, and USB Zigbee can be connected through Slot 1, while SPI LoRa®, USB LoRa®, and USB Zigbee devices can be connected through Slot 2.
+
+### Reset Hole
+
+There is a Mini Push Button Switch located in the reset hole of reComputer R1000. By pressing this button with a thin object, the CM4 can be reset. This pin when high signals that the CM4 has started. Driving this pin low resets the module.
+
+### Ethernet RJ45
+
+<div style="text-align: center;">
+  <table style="margin: auto;">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Speeds</th>
+        <th>PoE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ETH0</td>
+        <td>CM4 native Gigabit Ethernet</td>
+        <td>10/100/1000 Mbit/s</td>
+        <td>Supported (with additional module)</td>
+      </tr>
+      <tr>
+        <td>ETH1</td>
+        <td>Converted from USB</td>
+        <td>10/100 Mbit/s</td>
+        <td>Not Supported</td>
+      </tr>
+    </tbody>
 
