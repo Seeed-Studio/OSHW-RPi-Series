@@ -821,6 +821,144 @@ exit
 
 ### 4G Module
 
+The reComputer R1000 mainboard features two Mini-PCIe slots, with Mini-PCIe slot 1 supporting a 4G module using the USB protocol. The EC25 4G module from Quectel has been fully tested to be compatible with the reComputer R1000.
+
+> [!NOTE]
+> Please note that if you require 4G functionality, it is necessary to purchase the corresponding 4G module and external antenna. [Please click here for assemble instruction](https://wiki.seeedstudio.com/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna)
+
+
+To interact with a 4G module using AT commands via minicom, follow these steps:
+
+
+**Step 1.** Please put in the 4G enabled sim-card in the [sim card slot](/recomputer_r/#sim-slot), before you power up the system.
+
+**Step 2.** Check if EC25-EUX gets detectd by using ```lsusb```
+
+
+
+```
+lsusb
+lsusb -t
+```
+**Step 3.** Install the serial communication tool minicom.
+
+```sh
+sudo apt install minicom
+```
+**Step 4.** Connect EC25-EUX 4G module through minicom.
+
+```sh
+sudo minicom -D /dev/ttyUSB2 -b 1152008n1
+```
+
+once the serial connection opened, Type in AT and press 'Enter', and you should see OK.
+
+
+**Step 5.** Enable 4G module to connect to 4G network
+
+AT the same minicom serial window please type:
+
+```sh
+AT+QCFG="usbnet"
+```
+
+It will return something like ```+QCFG: "usbnet",0,``` but we need that to be set to 1 (ECM mode), so enter the following command:
+
+```sh
+AT+QCFG="usbnet",1
+```
+
+Then enter the following command to force the modem to reboot:
+
+```sh
+AT+CFUN=1,1
+```
+
+Then you could reboot or wait for a while for the moudel to get internet from your sim card carrier.
+
+You can also use the command `ifconfig` to query the networking status of reComputer R1000.
+
+### LoRa® Module
+
+> [!NOTE]
+> Both two Mini-PCIe slots supports LoRa® module using the USB protocol. Meanwhile, Mini-PCIe slot2 supports a LoRa® module using the SPI protocol. The WM1302 module from Seeed Studio has been fully tested to be compatible with the reComputer R1000. However the USB verison will need to uiltising the Mini PCIe designed for 4G Moudle which means if you want to use the both 4G Module and LoraWAN® Module Please choose SPI version of the WM1302 LoraWAN® Module.
+<br />
+Please note that if you require LoRa® functionality, it is necessary to purchase the corresponding LoRa® module and external antenna.
+
+#### WM1302 SPI Module
+
+**Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
+
+
+**Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
+
+- Select Interface Options
+- Select SPI, then select **Yes** to enable it
+- Select I2C, then select **Yes** to enable it
+- Select Serial Port, then select **No** for "Would you like a login shell..." and select **Yes** for "Would you like the serial port hardware..."
+
+After this, please reboot Raspberry Pi to make sure these settings work.
+
+**Step 3.** Download the [WM1302 code](https://github.com/Lora-net/sx1302_hal) to reComputer R1000 and compile it.
+
+```sh
+cd ~/
+git clone https://github.com/Lora-net/sx1302_hal
+cd sx1302_hal
+sudo vim ./libloragw/inc/loragw_i2c.h
+```
+
+Change `#define I2C_DEVICE "/dev/i2c-1"` to `#define I2C_DEVICE "/dev/i2c-3"`.
+
+```bash
+sudo make
+```
+
+**Step 4.** Copy the reset_lgw.sh script
+
+```bash
+vim ./tools/reset_lgw.sh
+```
+
+Modify the code:
+
+```bash
+SX1302_RESET_PIN=580     # SX1302 reset
+SX1302_POWER_EN_PIN=578  # SX1302 power enable
+SX1261_RESET_PIN=579     # SX1261 reset (LBT / Spectral Scan)
+// AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
+```
+
+```
+cp ./tools/reset_lgw.sh ./packet_forwarder/
+```
+
+**Step 5.** Modify the content of the `global_conf.json.sx1250.EU868` configuration file:
+
+```sh
+cd packet_forwarder
+vim global_conf.json.sx1250.EU868
+```
+
+Change `"com_path": "/dev/spidev0.0"` to `"com_path": "/dev/spidev0.1"`
+
+**Step 6.** Start LoraWAN® Module
+
+Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
+
+```sh
+cd ~/sx1302_hal/packet_forwarder
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868
+```
+
+
+
+
+
+
+
+
+
 
 
 
