@@ -8,11 +8,10 @@
 The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP ,and KNX protocols. With robust IoT network communication capabilities, the R1000 series supports multiple wireless communication options including 4G, LoRa®, Wi-Fi/BLE, allowing for flexible configurations to serve as corresponding wireless gateways. This controller is well-suited for remote device management, energy management, and various other scenarios in the field of smart buildings.
 
 ---
-
-## Table of Contents
+# Table of Contents
 
 - [reComputer R Series](#recomputer-r-series)
-  - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Hardware Overview](#hardware-overview)
   - [Mainboard Overview](#mainboard-overview)
@@ -40,7 +39,7 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
   - [These steps will help you test and ensure the functionality of the watchdog timer on your system.](#these-steps-will-help-you-test-and-ensure-the-functionality-of-the-watchdog-timer-on-your-system)
   - [Optional Interfaces and Modules](#optional-interfaces-and-modules)
     - [Wi-Fi/BLE](#wi-fible)
-      - [Connect wifi](#connect-wifi)
+      - [Connect WiFi](#connect-wifi)
       - [Connect bluetooth devices](#connect-bluetooth-devices)
     - [4G Module](#4g-module)
     - [LoRa® Module](#lora-module)
@@ -789,7 +788,7 @@ The reComputer R1000-10 is powered by the CM4 with an onboard Wi-Fi/BLE version,
 > It is important to note that due to the reComputer R1000's metal casing, Wi-Fi/BLE signals may have difficulty penetrating the metal exterior. If you require Wi-Fi/BLE functionality, it is recommended to purchase an external antenna and [click here for assemble instruction](https://wiki.seeedstudio.com/recomputer_r1000_hardware_guide/#assemble-wi-fible-antenna).
 
 
-#### Connect wifi
+#### Connect WiFi
 
 Step 1. To scan for Wi-Fi networks:
 
