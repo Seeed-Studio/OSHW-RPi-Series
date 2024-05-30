@@ -601,6 +601,7 @@ echo "c" > /proc/sysrq-trigger
 
 5. Monitor the system to confirm that it reboots after the specified timeout period.
 These steps will help you test and ensure the functionality of the watchdog timer on your system.
+---
 
 ## Optional Interfaces and Modules
 
@@ -710,5 +711,150 @@ Here is the accessories and optional modules list:
         <td style="height: 18px; width: 12.5%;">112990247</td>
       </tr>
       <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD</td>
+        <td style="height: 18px; width: 12.5%;">112990246</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD</td>
+        <td style="height: 18px; width: 12.5%;">112990245</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+The reComputer R1000 mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol. Additionally, 4G module and LoRa®® module shouldn't be used at the same time, can not plug in two LoRa® modules on board. 
+
+> [!NOTE]
+> Can not plug in 2 LoRa® modules on board.
+
+
+### Wi-Fi/BLE
+
+The reComputer R1000-10 is powered by the CM4 with an onboard Wi-Fi/BLE version, providing the same Wi-Fi/BLE parameters as the CM4. For detailed parameter information, please refer to the Raspberry Pi official website.
+
+> [!NOTE]
+> It is important to note that due to the reComputer R1000's metal casing, Wi-Fi/BLE signals may have difficulty penetrating the metal exterior. If you require Wi-Fi/BLE functionality, it is recommended to purchase an external antenna and [click here for assemble instruction](https://wiki.seeedstudio.com/recomputer_r1000_hardware_guide/#assemble-wi-fible-antenna).
+
+
+#### Connect wifi
+
+Step 1. To scan for Wi-Fi networks:
+
+```bash
+nmcli dev wifi list
+```
+
+Step 2. Connect to the wifi network:
+
+```bash
+sudo nmcli dev wifi connect network-ssid password "network-password"
+sudo nmcli --ask dev wifi connect network-ssid 
+#If you don't want to write your password on the screen, you can use the --ask option.
+```
+
+Step 3. After the device is powered on, it will automatically connect to wifi. If you want to delete the saved WiFi information:
+
+```bash
+nmcli con del network-ssid
+```
+
+After the connection is disconnected, connect to another wifi.
+
+#### Connect bluetooth devices
+
+Before adding a Bluetooth device, the Bluetooth service on your computer must be started and running. You can check this with the systemctl command.
+
+```bash
+sudo systemctl status bluetooth
+```
+
+If the Bluetooth service status is not active, you must enable it first. Then start the service so that it starts automatically when you start your device.
+
+```bash
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+```
+
+You can use the bluetoothctl tool to connect and manage Bluetooth, the following are some common commands and comments:
+
+```bash
+#Scan attachments to the device
+bluetoothctl scan on
+
+#To make your Bluetooth adapter discoverable to other devices, use the following command:
+bluetoothctl discoverable on
+
+
+#Replace A4:C1:38:F4:83:2E below with the Media Access Control (MAC) address you want to connect to
+#Pair a new Bluetooth device
+bluetoothctl pair A4:C1:38:F4:83:2E
+
+#Connect previously paired devices
+bluetoothctl connect A4:C1:38:F4:83:2E
+
+#View the list of devices paired with the system
+bluetoothctl paired-devices
+
+#When a Bluetooth device is trusted, the system automatically connects to it after discovering it
+bluetoothctl trust A4:C1:38:F4:83:2E
+
+#Cancel trust
+bluetoothctl untrust A4:C1:38:F4:83:2E
+
+#Remove a paired Bluetooth device
+bluetoothctl remove A4:C1:38:F4:83:2E
+
+#Disconnect the Bluetooth connection, but do not remove it from the paired list
+bluetoothctl disconnect A4:C1:38:F4:83:2E
+
+#Block specific devices from connecting to your system
+bluetoothctl block A4:C1:38:F4:83:2E
+
+#Unblock device
+bluetoothctl unblock A4:C1:38:F4:83:2E
+
+
+#Use interactive mode and exit
+bluetoothctl
+exit 
+```
+
+### 4G Module
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
