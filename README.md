@@ -42,6 +42,8 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
 * Surge: EN61000-4-5, level 2
 * Production Lifetime: reComputer R1000 will remain in production until at least December 2030
 
+---
+
 <table align="center">
   <tbody>
     <tr>
@@ -236,6 +238,7 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
   </tbody>
 </table>
 
+---
 ## Hardware Overview
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/02.png" /></div>
@@ -290,3 +293,69 @@ The reComputer R1000 does not come with a power button by default, and the syste
 ###  IIC Diagram
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/06.png" /></div>
+
+To query GPIO mappings and offsets, please use following command:
+
+```
+cat /sys/kernel/debug/gpio
+```
+### LED Indicator Status
+
+The reComputer R1000 features 6 LED indicators that serve to signal the machine's operational status. Please refer to the table below for the specific functions and status of each LED:
+
+| LED Indicator | Color          | Status | Description                                                  |
+| ------------- | -------------- | ------ | ------------------------------------------------------------ |
+| PWR           | Green          | On     | The device has been connected to power.                      |
+|               |                | Off    | The device is not connnected to power.                       |
+| ACT           | Green          |        | Under Linux this pin will flash to signify eMMC access.<br /> If any error occurs during booting, then this LED will flash an <br />error pattern which can be decoded using the look up [table on the Raspberry Pi website](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes). |
+| USER          | Green/Red/Blue |        | Need to be defined by user.                                  |
+| RS485-1       | Green          | Off    | No data transfer on RS485 channel 1.                         |
+|               |                | Blink  | RS485 channel 1 is receiveing or sending data.               |
+| RS485-2       | Green          | Off    | No data transfer on RS485 channel 2.                         |
+|               |                | Blink  | RS485 channel 2 is receiveing or sending data.               |
+| RS485-3       | Green          | Off    | No data transfer on RS485 channel 3.                         |
+|               |                | Blink  | RS485 channel 3 is receiveing or sending data.               |
+
+<br/>
+
+the ACT LED blinks in a regular four blink pattern, it cannot find bootcode (start.elf)
+If the ACT LED blinks in an irregular pattern then booting has started.
+If the ACT LED doesn't blink, then the EEPROM code might be corrupted, try again without anything connected to make sure. For more detail please check the Raspberry Pi forum:
+STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
+For more detail please check the [Raspberry Pi forum](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151).
+
+In this section we will use the raspi-gpio tool to test with GPIOs, you can use the raspi-gpio help to view the manual:
+
+```
+raspi-gpio help
+```
+
+1. The pin controlling the third LED of reComputer R1000 is gpio20. To get specific GPIO status, Please enter following command in the Terminal :
+
+```
+raspi-gpio get 20
+```
+
+2. Change the state of gpio20:
+
+```
+#set current pin state
+sudo raspi-gpio set 20 dl
+#get the pin state after set
+raspi-gpio get 20
+```
+
+### Buzzer
+
+The reComputer R1000 features an active buzzer, which can be used for various purposes such as alarm and event notifications. The buzzer is controlled through GPIO21 to CM4.
+
+To turn off(on) the buzzer, Please enter following command in the Terminal :
+
+```
+# Turn off the buzzer using LED brightness
+raspi-gpio set 21 op dl
+# Turn on the buzzer using LED brightness
+raspi-gpio set 21 op dh
+```
+
+### RS485
