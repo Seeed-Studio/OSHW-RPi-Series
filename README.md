@@ -373,3 +373,51 @@ The Boot Switch of the reComputer R1000 is connected to the nRPI_BOOT pin of CM4
 | <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/11.png" alt="image"/> | Flash mode  | Boot from USB  | High      |
 
 </div>
+
+### USB
+
+The reComputer R1000 is equipped with one USB Type-C port and two USB Type-A ports. Please refer to the table below for their functions and descriptions.
+
+| **Type**   | **Quantity** | **Protocol** | **Function** | **Description**                                              |
+| ---------- | ------------ | ------------ | ------------ | ------------------------------------------------------------ |
+| **Type-C** | 1           | USB2.0       | USB-Device   | Used for serial port debugging, burning image, etc.          |
+| **Type-A** | 2           | USB2.0       | USB-Host     | Connect different USB devices such as flash drives,<br /> USB keyboards or mouses. |
+
+Check if the USB hub is detected by running the **lsusb** command. This command lists all connected USB devices, including hubs.
+
+```
+lsusb
+```
+
+Running this command should display information about the USB devices connected to your system, including any USB hubs that are present.
+
+If the USB hub is functioning properly, you should see its details listed in the output of the **lsusb** command. If it's not listed, there may be an issue with the hub or its connection to the system. In such cases, you may need to troubleshoot the USB hub or its connections.
+
+### SIM Slot
+
+The reComputer R1000 uses a standard-size SIM card slot commonly found in industrial applications, which requires a standard SIM card with dimensions of 25mm x 15mm.
+
+> [!NOTE]
+> Please note that the standard version of reComputer R1000 does not come with a 4G module. If you require 4G functionality, an additional 4G module must be purchased separately.
+
+
+### SSD Slot
+
+The SSD slot on the reComputer R1000 is designed to accommodate NVMe M.2 2280 SSDs for 128GB, 256GB, 512GB and 1TB in capacity. This slot allows for high-speed storage expansion, enabling users to enhance the performance and capacity of their system.
+
+To list the disks, including the SSD, you can use the fdisk -l command. Here's how:
+ 
+```
+sudo fdisk -l
+```
+
+This command will display a list of all disks connected to your system, including the SSD if it's properly detected. Look for entries that represent your SSD. They typically start with /dev/sd followed by a letter (e.g., /dev/sda, /dev/sdb, etc.).
+Once you identify the entry corresponding to your SSD, you can proceed with partitioning or formatting it as needed.
+
+> [!NOTE]
+> There are two main uses for SSD cards:<br />
+- High Capacity Storage: SSD cards can be utilized for high-capacity storage needs.<br />
+- Boot Drive with Image: Another usage involves using the SSD both as a high-capacity storage and for storing system images, allowing booting directly from the SSD card.<br />
+- It's important to note that not all SSD cards available in the market support the second usage. Therefore, if you intend to use it as a boot drive and are unsure about which model to purchase, we recommend opting for our recommended 1TB SSD(SKU 112990267). This model has been tested and verified for boot functionality, reducing the risk of compatibility issues and minimizing trial and error costs.
+
+
