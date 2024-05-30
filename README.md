@@ -7,42 +7,8 @@
 
 The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP ,and KNX protocols. With robust IoT network communication capabilities, the R1000 series supports multiple wireless communication options including 4G, LoRa®, Wi-Fi/BLE, allowing for flexible configurations to serve as corresponding wireless gateways. This controller is well-suited for remote device management, energy management, and various other scenarios in the field of smart buildings.
 
-## Features
-
-### Designed for Building Automation System
-* Multiple isolated RS485 channels supports high and low speeds communication.
-* Supports BACnet, Modbus RTU, Modbus TCP/IP and KNX protocol
-* Up to 8GB RAM supports the processing of thousands of data points, ensuring efficient performance
-* Clear dual-sided LED indicators help check operational status quickly
-* High-quality metal case, compatible with DIN-rail and Wall installation 
-* Supports Yocto and Buildroot for customized OS
-### Powerful Performance
-* Powered by Raspberry Pi CM4 
-* Broadcom BCM2711 quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz 
-* Up to 8GB RAM and 32GB eMMC
-### Rich Wireless Capabilities
-* On-chip Wi-Fi
-* On-chip BLE
-* Mini-PCIe1: LTE, USB LoRa®, USB Zigbee
-* Mini-PCIe2: SPI LoRa®, USB LoRa®, USB Zigbee
-### Rich Interfaces
-* 3x RS485 (isolated）
-* 1x 10M/100M/1000M Ethernet (Support PoE)
-* 1x 10M/100M Ethernet
-* 1x HDMI 2.0
-* 2x Type-A USB2.0 
-* 1x Type-C USB2.0 (USB console for OS update)
-* 1x SIM card slot
-### Safety and Reliability
-* Hardware Watchdog(optional)
-* UPS Supercapacitor(optional)
-* Metal casing with PC side panels
-* ESD: EN61000-4-2,level 3
-* EFT: EN61000-4-4, level 2
-* Surge: EN61000-4-5, level 2
-* Production Lifetime: reComputer R1000 will remain in production until at least December 2030
-
 ---
+## Features
 
 <table align="center">
   <tbody>
@@ -359,3 +325,51 @@ raspi-gpio set 21 op dh
 ```
 
 ### RS485
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/08.png" /></div>
+
+The reComputer R1000 is equipped with 3 sets of RS485 interface using 3-pin connector, which is isolated for both signal and power to ensure safe and reliable operation in industrial and automation applications. The RS485A and RS485B signals are isolated using capacitive isolation, which provides excellent EMI immunity and meets the high-speed communication requirements of the RS485 interface.
+By default, 120Ω terminal resistors is not installed. However, the packaging box includes five surface-mount resistors. If needed, users should solder the resistor onto the device themselves.
+
+> [!NOTE]
+> The RS485 interface uses an isolated power supply, which means that the ground signal for external devices connected to the RS485 interface should be connected to the GND_ISO pin.
+
+These are the pins related to the 485 interface of reComputer for the data table.
+
+| RS485         | RS485_POWER_EN         | OS device file | P14         | default(High) |
+| ------------- | ---------------------- | -------------- | ----------- | ------------- |
+| TX5           |                        | /dev/ttyAMA5   | GPIO12      |               |
+| RX5           |                        |                | GPIO13      |               |
+| TX2           | ID_SD                  | /dev/ttyAMA2   | GPIO0/ID_SD |               |
+| RX2           | ID_SC                  |                | GPIO1/ID_SC |               |
+| TX3           |                        | /dev/ttyAMA3   | GPIO4       |               |
+| RX3           |                        |                | GPIO5       |               |
+| RS485_1_DE/RE | (Hight/DE \|\| Low/RE) | /dev/ttyAMA2   | GPIO6       | default Low   |
+| RS485_2_DE/RE |                        | /dev/ttyAMA3   | GPIO17      | default Low   |
+| RS485_3_DE/RE |                        | /dev/ttyAMA5   | GPIO24      | default Low   |
+
+By default, the power enable port of the RS485 port is high. And each RS485 interface is in the accepting state. You can do a simple experiment.
+
+The 485 port that connects the pc to the reComputer-R.
+
+Enter in the terminal of reComputer:
+
+```
+cat /dev/ttyAMA2
+```
+
+Then send some data in the serial debugging tool of your computer, you can observe the data in the terminal window of reComputer.
+
+### Boot Switch
+
+The Boot Switch of the reComputer R1000 is connected to the nRPI_BOOT pin of CM4. This switch provides users with the option to select the boot source between eMMC and USB. In normal mode, the switch should be set away from the side with the "BOOT" label, enabling the system to boot from eMMC. Conversely, when users need to flash the system image, they should set the switch towards the "BOOT" label, allowing the system to boot from the Type-C USB interface.
+
+
+<div class="table-center">
+
+| Switch Position                                              | Mode        | Description    | nRPI-BOOT |
+| ------------------------------------------------------------ | ----------- | -------------- | --------- |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/10.png" alt="image"/> | Normal mode | Boot from eMMC | Low       |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/11.png" alt="image"/> | Flash mode  | Boot from USB  | High      |
+
+</div>
