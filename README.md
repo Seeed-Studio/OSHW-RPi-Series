@@ -1112,20 +1112,115 @@ The reComputer R1000 supports 2280 NVMe SSD through the use of a PCIe slot(J62) 
   </tbody>
 </table>
 
+> [!NOTE]
+> Please note that:<br />
+1- The speed test results may vary depending on the SSD model, testing method, and testing environment. The values provided here are for reference purposes only and were obtained in Seeed's laboratory.<br />
+
+
+>There are two main uses for SSD cards:<br />
+1.High Capacity Storage: SSD cards can be utilized for high-capacity storage needs.<br />
+
+>2.Boot Drive with Image: Another usage involves using the SSD both as a highcapacity storage and for storing system images, allowing booting directly from the SSD card.<br />
+
+>It's important to note that not all SSD cards available in the market support the second usage. Therefore, if you intend to use it as a boot drive and are unsure about which model to purchase, we recommend opting for our recommended **1TB SSD(SKU [112990267](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html))**. This model has been tested and verified for boot functionality, reducing the risk of compatibility issues and minimizing trial and error costs.
+
+
+### Encryption Chip TPM 2.0
+
+The TPM features Infineon’s OPTIGA™ TPM SLB9670 which is compliant to the Trusted Computing Group (TCG) TPM 2.0 specification is recommened as encryption chip to the reComputer R1000. The chip features an SPI interface applied for port J13 on board, to enable a root of trust for platform integrity, remote attestation, and cryptographic services.
+
+
+> [!NOTE]
+> Essential details that users should not overlook, even when browsing quickly.
+
+If you connect TPM 2.0 module to device, the following code can help check TPM connection.
+
+```bash
+ls /dev | grep tpm
+```
+
+If you see **tpm0** and **tpmrm0** in the output, it means that TPM (Trusted Platform Module) devices are detected and available on your system. This indicates that the TPM hardware is recognized and accessible, which is a good sign. You can proceed with using TPM-related functionalities or applications knowing that the devices are present and accessible.
+
+
+### UPS
+
+he UPS is 7F, which operates in series. The UPS module is positioned between the DC5V and CM4 components, with a GPIO signal utilized to alert the CPU in the event of a power loss from the 5V supply. Upon receiving this signal, the CPU executes an urgent script before the super capacitor's energy is depleted, initiating a "$ shutdown" command.
+<br />
+The backup duration provided by the UPS heavily relies on the system load. Below are some typical scenarios tested with a CM4 module featuring 4GB RAM, 32GB eMMC storage, and a Wi-Fi module.
+<br />
+
+| Mode of Operation | Time(s) | Remark                                                       |
+| ----------------- | ------- | ------------------------------------------------------------ |
+| Idle              | 37      | Testing under idle conditions with official driver program loaded |
+| Full load of CPU  | 18      | stress -c 4 -t 10m -v &                                      |
+
+> [!NOTE]
+> For UPS function please contact us for more information, and the alarm signal is active LOW.
+[Please click here for assemble instruction](https://wiki.seeedstudio.com/recomputer_r1000_hardware_guide/#assemble-ups-and-poe-module).
+
+A GPIO25 between CPU and DC/AC power in is used to alarm CPU when the 5V power supply is down. Then the CPU should do something urgent in a script before energy exhaustion of super capacitor and run a `$ shutdown`
+<br />
+Another way to use this function is Initiate a shutdown when GPIO pin changes. The given GPIO pin is configured as an input key that generates KEY_POWER events. This event is handled by systemd-logind by initiating a shutdown. 
+Use `/boot/overlays/README` as reference, then modify `/boot/config.txt`. 
+
+```bash
+dtoverlay=gpio-shutdown, gpio_pin=GPIO25,active_low=1
+```
+
+> [!NOTE]
+> 1.  For UPS function please contact us for more information.
+>2.  The alarm signal is active LOW.
+
+The python code below is a demo for detecting the working mode of supercapacitor UPS through GPIO25, and automatically saving data and shut down when the system is powered off.
+
+```python
+import RPi.GPIO as GPIO
+import time,os
+
+num = 0
+
+GPIO.setmode(GPIO,BCM)
+#set GPIO25 as input mode
+#add 500ms jitter time for software stabilization
+GPIO.setup(25,GPIO.IN,pull_up_down = GPIO.PUD_DOWN)
+GPIO.add_event_detect(25,GPIO.FALLING, bouncetime = 500) 
+while True:
+  if GPIO.event_detected(25):
+    print('...External power off...')
+    print('')
+    os.system('sync')
+    print('...Data saving...')
+    print('')
+    time.sleep(3)
+    os.system('sync')
+    #saving two times
+    while num<5:
+      print('-----------')
+      s = 5-num
+      print('---' + str(s) + '---')
+      num = num + 1
+      time.sleep(1)
+    print('---------')
+    os.system('sudo shutdown -h now')
+```
+
+
+
+###  DSI & Speaker
+
+One DSI (J24)and one 4-pin Spearker (J7)interfaces are reserved on board, for special usage. Users are requested to purchase plug-ins according to your own needs.
 
 
 
 
+## Additional Resources
 
-
-
-
-
-
-
-
-
-
+*  [User manual-reComputer R1000](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputerR_UserManual_version01.pdf)
+*  [User manual-reComputer R1000 in Chinese](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputerR_UserManual_CN_version01.pdf )
+*  [reComputer R1000 3D File](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000.stp)
+*  [reComputer R1000 Schematic Desing, PCB Desing](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_schematic_design_files.zip)
+*  [reComputer R1000 Flyer](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer.pdf)
+*  [reComputer R1000 Flyer in Chinese](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer_CN.pdf)
 
 
 
