@@ -1,11 +1,9 @@
-# reComputer_R_Series
+# reComputer R Series
 
 
 <p align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width="400" height="auto"/></p>
 
-<div style="text-align: center;">
-  <a href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" style="background-color: #8dc21f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 16px;">Oder Now</a>
-</div>
+<p align="center"><a href="https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
 The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP ,and KNX protocols. With robust IoT network communication capabilities, the R1000 series supports multiple wireless communication options including 4G, LoRa®, Wi-Fi/BLE, allowing for flexible configurations to serve as corresponding wireless gateways. This controller is well-suited for remote device management, energy management, and various other scenarios in the field of smart buildings.
 
@@ -238,3 +236,57 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
   </tbody>
 </table>
 
+## Hardware Overview
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/02.png" /></div>
+
+## Mainboard Overview
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/03.png" /></div>
+
+## Power Diagram
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/04.png" /></div>
+
+The reComputer R1000 supports three power supply options: AC, DC terminal and PoE port. By default, the reComputer R1000 is powered through the AC/DC terminal (Official regional power adapter SKU:110061505/110061506), while **the PoE power supply(PoE module, SKU:110991925) is optional**. This provides flexibility in power supply selection and allows for easy integration with various power sources.
+
+### 2-Pin Power terminal
+
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/powerplug.png" /></div>
+
+The reComputer R1000 is supplied with a nominal AC voltage of 12~24 V or DC voltage of 9~36V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer R1000, the ground wire can be secured to the screw located at the top left corner of the power terminal.
+
+### POE (optional)
+
+With the PoE module installed, the ETH0 port of reComputer R1000 can support PoE power supply, providing a convenient and efficientway to power the device over Ethernet. This option simplifies the installation process and reduces the amount of cabling required, making it an ideal solution for applications with limited power sources or where power outlets are not readily available.
+
+* PoE input: Range 44~57V; Typical 48V 
+* PoE output: 12V, 1.1A Max.
+
+> [!NOTE]
+> It's worth noting that the PoE module provided with the reComputer R1000 is compliant with the IEEE 802.3af standard and can provide a maximum power supply of 12.95W. Therefore, if there is a need to connect high-power peripherals such as SSD or 4G modules, the PoE power supply may not be sufficient. In this case, it's recommended to use the AC/DC terminal for power supply instead to ensure stable and reliable operation of the device.
+
+### Power Consumption
+
+Please refer to the table below for the tested power consumption of reComputer R1000 in Seeed Studio's laboratory. Please note that this value is for reference only, as the test methods and environment can result in variations in the results.
+
+| Status   | Voltage | Current | Power Consumption | Description |
+|   ---      |    ---    |   ---      |         ---          |        ---    |
+|Shutdown  |24V      |  51mA  |    1.224W         | Static power consumption test in shutdown and power-off state.|
+|Idle      |24V      |  120mA |    2.88W          | To test the input current when supplying 24V power to the reComputer R1000 device without running any test programs.|
+|Full Load |24V      |  230mA  |    5.52W          | Configure CPU to run at full load using the "stress -c 4" command. No external devices connected. |
+
+### Power On and Power Off
+
+The reComputer R1000 does not come with a power button by default, and the system will automatically start up once power is connect- ed. When shutting down, please select the shutdown option in the operating system and wait for the system to fully shut down before cutting off power. To restart the system, simply reconnect to the power.
+
+> [!NOTE]
+> Please note that after shutting down, please wait for at least 10 seconds before restarting the system to allow for the internal capacitors to fully discharge.
+
+## Block Diagram
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/05.png" /></div>
+
+###  IIC Diagram
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/06.png" /></div>
