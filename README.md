@@ -265,7 +265,7 @@ Options marked with * require additional purchase according to accessories
 ---
 ## Hardware Overview
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/02.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/02.png"/></div>
 
 ## Mainboard Overview
 
