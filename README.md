@@ -421,8 +421,9 @@ Once you identify the entry corresponding to your SSD, you can proceed with part
 >- It's important to note that not all SSD cards available in the market support the second usage. Therefore, if you intend to use it as a boot drive and are unsure about which model to purchase, we recommend opting for our recommended 1TB SSD(SKU 112990267). This model has been tested and verified for boot functionality, reducing the risk of compatibility issues and minimizing trial and error costs.
 
 ### Mini-PCle Slot
-<div style="text-align: center;">
-  <table style="margin: auto;">
+
+
+  <table align="center">
     <thead>
       <tr>
         <th>Slot</th>
@@ -456,7 +457,7 @@ Once you identify the entry corresponding to your SSD, you can proceed with part
       </tr>
     </tbody>
   </table>
-</div>
+
 
 
 This device features two Mini-PCIe interfaces, namely Mini-PCIe Slot 1 and Mini-PCIe Slot 2. Slot 1 connects to SIM card slot and supports USB protocols, while Slot 2 supports both USB and SPI protocols but doesn't connect to SIM card slot. Therefore, devices such as 4G LTE, USB LoRa®, and USB Zigbee can be connected through Slot 1, while SPI LoRa®, USB LoRa®, and USB Zigbee devices can be connected through Slot 2.
@@ -467,8 +468,7 @@ There is a Mini Push Button Switch located in the reset hole of reComputer R1000
 
 ### Ethernet RJ45
 
-<div style="text-align: center;">
-  <table style="margin: auto;">
+<table align="center">
     <thead>
       <tr>
         <th>Name</th>
@@ -491,4 +491,5 @@ There is a Mini Push Button Switch located in the reset hole of reComputer R1000
         <td>Not Supported</td>
       </tr>
     </tbody>
+    </table>
 
