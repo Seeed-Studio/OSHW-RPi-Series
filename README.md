@@ -36,7 +36,6 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
     - [HDMI](#hdmi)
     - [RTC](#rtc)
     - [Watchdog](#watchdog)
-  - [These steps will help you test and ensure the functionality of the watchdog timer on your system.](#these-steps-will-help-you-test-and-ensure-the-functionality-of-the-watchdog-timer-on-your-system)
   - [Optional Interfaces and Modules](#optional-interfaces-and-modules)
     - [Wi-Fi/BLE](#wi-fible)
       - [Connect WiFi](#connect-wifi)
@@ -46,7 +45,6 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
       - [WM1302 SPI Module](#wm1302-spi-module)
       - [WM1302 USB Module](#wm1302-usb-module)
     - [Zigbee Module](#zigbee-module)
-      - [To test Zigbee communication with two Zigbee modules, follow these steps:](#to-test-zigbee-communication-with-two-zigbee-modules-follow-these-steps)
     - [PoE](#poe)
     - [SSD](#ssd)
     - [Encryption Chip TPM 2.0](#encryption-chip-tpm-20)
@@ -651,8 +649,7 @@ echo "c" > /proc/sysrq-trigger
 > [!WARNING]
 > This command triggers a kernel crash and should cause the watchdog to reboot the system.
 
-5. Monitor the system to confirm that it reboots after the specified timeout period.
-These steps will help you test and ensure the functionality of the watchdog timer on your system.
+5. Monitor the system to confirm that it reboots after the specified timeout period.These steps will help you test and ensure the functionality of the watchdog timer on your system.
 ---
 
 ## Optional Interfaces and Modules
@@ -1077,7 +1074,7 @@ The Mini-PCIe slots offer support for Zigbee modules utilizing the USB protocol,
 > Please note that if you require Zigbee functionality, it is necessary to purchase the corresponding Zigbee module and external antenna.
 [Please click here for assemble instruction](https://wiki.seeedstudio.com/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna).
 
-#### To test Zigbee communication with two Zigbee modules, follow these steps:
+ To test Zigbee communication with two Zigbee modules, follow these steps:
 
 **Step 1.** Check Serial Ports:
 Use the following command to check available serial ports:
