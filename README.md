@@ -3,6 +3,9 @@
 
 <p align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width="400" height="auto"/></p>
 
+<div style="text-align: center;">
+  <a href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" style="background-color: #8dc21f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 16px;">Oder Now</a>
+</div>
 
 The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP ,and KNX protocols. With robust IoT network communication capabilities, the R1000 series supports multiple wireless communication options including 4G, LoRa®, Wi-Fi/BLE, allowing for flexible configurations to serve as corresponding wireless gateways. This controller is well-suited for remote device management, energy management, and various other scenarios in the field of smart buildings.
 
@@ -41,7 +44,7 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
 * Surge: EN61000-4-5, level 2
 * Production Lifetime: reComputer R1000 will remain in production until at least December 2030
 
-<table>
+<table align="center">
   <tbody>
     <tr>
       <td style="width: 35.4622%;">Parameter</td>
@@ -234,3 +237,4 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
     </tr>
   </tbody>
 </table>
+
