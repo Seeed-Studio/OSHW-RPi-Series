@@ -13,6 +13,7 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
 - [reComputer R Series](#recomputer-r-series)
 - [Table of Contents](#table-of-contents)
   - [Features](#features)
+  - [Options marked with \* require additional purchase according to accessories](#options-marked-with--require-additional-purchase-according-to-accessories)
   - [Hardware Overview](#hardware-overview)
   - [Mainboard Overview](#mainboard-overview)
   - [Power Diagram](#power-diagram)
@@ -249,9 +250,18 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
       <td>Supercapacitor UPS</td>
       <td colspan="2">SuperCAP UPS LTC3350 Module*</td>
     </tr>
+     <tr>
+      <td>Security</td>
+      <td colspan="2">Encryption Chip TPM2.0/ATECC608A</td>
+    </tr>
+     <tr>
+      <td>Heat Dissipation</td>
+      <td colspan="2">Fanless</td>
+    </tr>
   </tbody>
 </table>
 
+Options marked with * require additional purchase according to accessories
 ---
 ## Hardware Overview
 
