@@ -262,7 +262,7 @@ The reComputer R1000 does not come with a power button by default, and the syste
 
 To query GPIO mappings and offsets, please use following command:
 
-```
+```bash
 cat /sys/kernel/debug/gpio
 ```
 ### LED Indicator Status
@@ -292,13 +292,13 @@ For more detail please check the [Raspberry Pi forum](https://forums.raspberrypi
 
 In this section we will use the raspi-gpio tool to test with GPIOs, you can use the raspi-gpio help to view the manual:
 
-```
+```bash
 raspi-gpio help
 ```
 
 1. The pin controlling the third LED of reComputer R1000 is gpio20. To get specific GPIO status, Please enter following command in the Terminal :
 
-```
+```bash
 raspi-gpio get 20
 ```
 
@@ -354,7 +354,7 @@ The 485 port that connects the pc to the reComputer-R.
 
 Enter in the terminal of reComputer:
 
-```
+```bash
 cat /dev/ttyAMA2
 ```
 
@@ -385,7 +385,7 @@ The reComputer R1000 is equipped with one USB Type-C port and two USB Type-A por
 
 Check if the USB hub is detected by running the **lsusb** command. This command lists all connected USB devices, including hubs.
 
-```
+```bash
 lsusb
 ```
 
@@ -407,7 +407,7 @@ The SSD slot on the reComputer R1000 is designed to accommodate NVMe M.2 2280 SS
 
 To list the disks, including the SSD, you can use the fdisk -l command. Here's how:
  
-```
+```bash
 sudo fdisk -l
 ```
 
@@ -507,28 +507,29 @@ The reComputer R1000 features an RTC circuit that comes pre-installed with a CR2
 To test the Real-Time Clock (RTC) functionality, follow these steps:
 1. Disable automatic time synchronization:
 
-```
+```bash
 sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
 ```
 
 2. Set the time to 12:00 PM on March 20, 2024:
 
-```
+```bash
 sudo hwclock --set --date "2024-03-20 12:00:00"
 ```
 
 3. Synchronize the RTC time to the system:
 
-```
+```bash
 sudo hwclock --hctosys
 ```
 
 4. Check the RTC time:
 
-```
+```bash
 sudo hwclock -r
 ```
+
 
 This command will read and display the time stored in the RTC.
 
@@ -595,5 +596,119 @@ sudo su
 echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
+> [!WARNING]
+> This command triggers a kernel crash and should cause the watchdog to reboot the system.
+
+5. Monitor the system to confirm that it reboots after the specified timeout period.
+These steps will help you test and ensure the functionality of the watchdog timer on your system.
+
+## Optional Interfaces and Modules
+
+The reComputer R1000 supports a rich selection of expansion modules and accessories, making it suitable for a wide range of scenarios and requirements. If you are interested in customizing the reComputer R1000, please contactodm@seeed.cc for more information.
+Here is the accessories and optional modules list:
+
+<div class="table-center">
+  <table>
+    <tbody>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 25%;"><strong>Remark</strong></td>
+        <td style="height: 18px; width: 25%;"><strong>Item</strong></td>
+        <td style="height: 18px; width: 37.5%;"><strong>Product Name</strong></td>
+        <td style="height: 18px; width: 12.5%;"><strong>SKU</strong></td>
+      </tr>
+      <tr style="height: 18px;">
+        <td rowspan="5" style="height: 18px; width: 25%;">Must be used together for LoRa®WAN Function</td>
+        <td rowspan="4" style="height: 18px; width: 25%;">LoRa® Module</td>
+        <td style="height: 18px; width: 37.5%;">Region optional LoRaWAN Gateway Module(SPI)-US915</td>
+        <td style="height: 18px; width: 12.5%;">114992969</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">Region optional LoRaWAN Gateway Module(SPI)-EU868</td>
+        <td style="height: 18px; width: 12.5%;">114993268</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">Region optional LoRaWAN Gateway Module(USB)-US915</td>
+        <td style="height: 18px; width: 12.5%;">114992991</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">Region optional LoRaWAN Gateway Module(USB)-EU868</td>
+        <td style="height: 18px; width: 12.5%;">114992628</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 25%;">LoRa® Antenna</td>
+        <td style="height: 18px; width: 37.5%;">LoRa Antenna Kit - 868-915 MHz</td>
+        <td style="height: 18px; width: 12.5%;">110061501</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 25%;"></td>
+        <td style="height: 18px; width: 25%;">Zigbee Module</td>
+        <td style="height: 18px; width: 37.5%;">Mini-PCIe USB Zigbee Module</td>
+        <td style="height: 18px; width: 12.5%;">110992005</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 25%;"></td>
+        <td style="height: 18px; width: 25%;">Zigbee Antenna</td>
+        <td style="height: 18px; width: 37.5%;">Zigbee Antenna Kit for reComputer R</td>
+        <td style="height: 18px; width: 12.5%;">110061641</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 25%;">This accessory is required for Wi-Fi function</td>
+        <td style="height: 18px; width: 25%;">Wi-Fi/BLE Antenna</td>
+        <td style="height: 18px; width: 37.5%;">Raspberry Pi Compute Module 4 Antenna Kit</td>
+        <td style="height: 18px; width: 12.5%;">114992364</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td rowspan="8" style="height: 18px; width: 25%;">4G antenna with 4G module for 4G function, GPS antenna with 4G module for GPS function</td>
+        <td rowspan="6" style="height: 18px; width: 25%;">4G module</td>
+        <td style="height: 18px; width: 37.5%;">LTE Cat 4 EC25-AFXGA-Mini-PCIe Module - for North American</td>
+        <td style="height: 18px; width: 12.5%;">113991134</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">LTE Cat 4 EC25-EUXGR-Mini-PCIe Module - for EMEA and Thai</td>
+        <td style="height: 18px; width: 12.5%;">113991135</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">LTE Cat 4 EC25-AUXGR-Mini-PCIe Module - for Australia</td>
+        <td style="height: 18px; width: 12.5%;">113991174</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">LTE Cat 4 EC25-EFA-Mini-PCIe Module - for Thai</td>
+        <td style="height: 18px; width: 12.5%;">113991214</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">LTE Cat 4 EC25-EMGA-Mini-PCIe Module - for Malaysia</td>
+        <td style="height: 18px; width: 12.5%;">113991234</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">LTE Cat 4 EC25-JFA-mini-PCIe</td>
+        <td style="height: 18px; width: 12.5%;">113991296</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 25%;">4G Antenna</td>
+        <td style="height: 18px; width: 37.5%;">4G Antenna Kit for 4G module</td>
+        <td style="height: 18px; width: 12.5%;">110061502</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 25%;">GPS Antenna</td>
+        <td style="height: 18px; width: 37.5%;">GPS Antenna Kit for EC25 4G Module</td>
+        <td style="height: 18px; width: 12.5%;">110061521</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 25%;"></td>
+        <td style="height: 18px; width: 25%;">Encryption Chip TPM 2.0</td>
+        <td style="height: 18px; width: 37.5%;">TPM 2.0 Module with infineon SLB9670</td>
+        <td style="height: 18px; width: 12.5%;">114993114</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td rowspan="4" style="height: 18px; width: 25%;"></td>
+        <td rowspan="4" style="height: 18px; width: 25%;">SSD card</td>
+        <td style="height: 18px; width: 37.5%;">NVMe M.2 2280 SSD 1TB</td>
+        <td style="height: 18px; width: 12.5%;">112990267</td>
+      </tr>
+      <tr style="height: 18px;">
+        <td style="height: 18px; width: 37.5%;">512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD</td>
+        <td style="height: 18px; width: 12.5%;">112990247</td>
+      </tr>
+      <tr style="height: 18px;">
 
 
