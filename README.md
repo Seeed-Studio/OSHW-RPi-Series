@@ -41,52 +41,196 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
 * Surge: EN61000-4-5, level 2
 * Production Lifetime: reComputer R1000 will remain in production until at least December 2030
 
-| Parameter              | Description                                                     |
-|------------------------|-----------------------------------------------------------------|
-| **Hardware Spec**      |                                                                 |
-| Product Series         | R10xx-10                               | R10xx-00              |
-| CPU                    | Raspberry Pi CM4, Quad-core Cortex-A72@ 1.5GHz                  |
-| Operating System       | Raspbian, Debian                                               |
-| RAM                    | 1GB/2GB/4GB/8GB                                                |
-| eMMC                   | 8GB/16GB/32GB                                                  |
-| **System Spec**        |                                                                 |
-| Input                  | 2-pin Terminal Block                                           |
-| PoE(as powered device) | IEEE 802.3af Standard 12.95W PoE*                              |
-| Supply Voltage(AC/DC)  | 12~24V AC/9~36V DC                                             |
-| Overvoltage Protection | 40V                                                            |
-| Power Consumption      | Idle:2.88W; Full Load:5.52W                                    |
-| Power Switch           | No                                                             |
-| Reboot Switch          | Yes                                                            |
-| **Interface**          |                                                                 |
-| Ethernet               | 1 x 10/100/1000 Mbps(supports PoE*) | 1 x 10/100 Mbps IEEE802.3/802.3u |
-| USB                    | 2 x USB-A 2.0 Host | 1 x USB-C 2.0 (For flashing OS)           |
-| RS485                  | 3 x 3-pin Terminal Block (isolated)                            |
-| HDMI                   | 1 x HDMI 2.0                                                   |
-| SIM Card Slot          | supports Standard SIM Card                                     |
-| M.2 Slot               | supports M.2 NVMe SSD                                          |
-| LED                    | 6 x LED indicators                                             |
-| Buzzer                 | 1                                                              |
-| Reset Button           | 1                                                              |
-| DSI(reserved)          | supports LCD*(on board within the enclosure)                   |
-| Speaker(reserved)      | supports Microphone*(on board within the enclosure)            |
-| **Wireless Communication** |                                                          |
-| Wi-Fi 2.4/5.0 GHz      | On-chip Wi-Fi*                         | No                     |
-| BLE 5.0                | On-chip BLE*                          | No                     |
-| LoRa®                  | USB LoRa®/SPI LoRa®*                                          |
-| 4G Cellular            | 4G LTE*                                                       |
-| Zigbee                 | USB Zigbee*                                                   |
-| **Standards**          |                                                                 |
-| EMC                    | ESD:  EN61000-4-2, Level 3                                      |
-|                        | EFT:  EN61000-4-4, Level 2                                      |
-|                        | Surge:  EN61000-4-5, Level 2                                    |
-| Certification          | CE, FCC                                                        |
-|                        | TELEC                                                          |
-|                        | RoHS                                                           |
-|                        | REACH                                                          |
-| **Ambient Conditions** |                                                                 |
-| Ingress Protection     | IP40                                                           |
-| Operating Temperature  | -30~70 °C                                                      |
-| Operating Humidity     | 10~95% RH                                                      |
-| Storage Temperature    | -40~80 °C                                                      |
-| **Others**             |                                                                 |
-| Supercapacitor UPS     | SuperCAP UPS LTC3350 Module*                                   |
+<table>
+  <tbody>
+    <tr>
+      <td style="width: 35.4622%;">Parameter</td>
+      <td colspan="2" style="width: 63.1933%;">Description</td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>Hardware Spec</strong></td>
+    </tr>
+    <tr>
+      <td style="width: 35.4622%;">Product Series</td>
+      <td style="width: 31.5967%;">R10xx-10</td>
+      <td style="width: 31.5966%;">R10xx-00</td>
+    </tr>
+    <tr>
+      <td>CPU</td>
+      <td colspan="2">Raspberry Pi CM4, Quad-core Cortex-A72@ 1.5GHz</td>
+    </tr>
+    <tr>
+      <td>Operating System</td>
+      <td colspan="2">Raspbian, Debian</td>
+    </tr>
+    <tr>
+      <td>RAM</td>
+      <td colspan="2">1GB/2GB/4GB/8GB</td>
+    </tr>
+    <tr>
+      <td>eMMC</td>
+      <td colspan="2">8GB/16GB/32GB</td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>System Spec</strong></td>
+    </tr>
+    <tr>
+      <td>Input</td>
+      <td colspan="2">2-pin Terminal Block</td>
+    </tr>
+    <tr>
+      <td>PoE(as powered device)</td>
+      <td colspan="2">IEEE 802.3af Standard 12.95W PoE*</td>
+    </tr>
+    <tr>
+      <td>Supply Voltage(AC/DC)</td>
+      <td colspan="2">12~24V AC/9~36V DC</td>
+    </tr>
+    <tr>
+      <td>Overvoltage Protection</td>
+      <td colspan="2">40V</td>
+    </tr>
+    <tr>
+      <td>Power Consumption</td>
+      <td colspan="2">Idle:2.88W; Full Load:5.52W</td>
+    </tr>
+    <tr>
+      <td>Power Switch</td>
+      <td colspan="2">No</td>
+    </tr>
+    <tr>
+      <td>Reboot Switch</td>
+      <td colspan="2">Yes</td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>Interface</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Ethernet</td>
+      <td colspan="2">1 x 10/100/1000 Mbps(supports PoE*)</td>
+    </tr>
+    <tr>
+      <td colspan="2">1 x 10/100 Mbps IEEE802.3/802.3u</td>
+    </tr>
+    <tr>
+      <td rowspan="2">USB</td>
+      <td colspan="2">2 x USB-A 2.0 Host</td>
+    </tr>
+    <tr>
+      <td colspan="2">1 x USB-C 2.0 (For flashing OS)</td>
+    </tr>
+    <tr>
+      <td>RS485</td>
+      <td colspan="2">3 x 3-pin Terminal Block (isolated)</td>
+    </tr>
+    <tr>
+      <td>HDMI</td>
+      <td colspan="2">1 x HDMI 2.0</td>
+    </tr>
+    <tr>
+      <td>SIM Card Slot</td>
+      <td colspan="2">supports Standard SIM Card</td>
+    </tr>
+    <tr>
+      <td>M.2 Slot</td>
+      <td colspan="2">supports M.2 NVMe SSD</td>
+    </tr>
+    <tr>
+      <td>LED</td>
+      <td colspan="2">6 x LED indicators</td>
+    </tr>
+    <tr>
+      <td>Buzzer</td>
+      <td colspan="2">1</td>
+    </tr>
+    <tr>
+      <td>Reset Button</td>
+      <td colspan="2">1</td>
+    </tr>
+    <tr>
+      <td>DSI(reserved)</td>
+      <td colspan="2">supports LCD*(on board within the enclosure)</td>
+    </tr>
+    <tr>
+      <td>Speaker(reserved)</td>
+      <td colspan="2">supports Microphone*(on board within the enclosure)</td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>Wireless Communication</strong></td>
+    </tr>
+    <tr>
+      <td>Wi-Fi 2.4/5.0 GHz</td>
+      <td style="width: 31.5967%;">On-chip Wi-Fi*</td>
+      <td style="width: 31.5966%;">No</td>
+    </tr>
+    <tr>
+      <td>BLE 5.0</td>
+      <td>On-chip BLE*</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>LoRa®</td>
+      <td colspan="2">USB LoRa®/SPI LoRa®*</td>
+    </tr>
+    <tr>
+      <td>4G Cellular</td>
+      <td colspan="2">4G LTE*</td>
+    </tr>
+    <tr>
+      <td>Zigbee</td>
+      <td colspan="2">USB Zigbee*</td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>Standards</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="3">EMC</td>
+      <td colspan="2">ESD: EN61000-4-2, Level 3</td>
+    </tr>
+    <tr>
+      <td colspan="2">EFT: EN61000-4-4, Level 2</td>
+    </tr>
+    <tr>
+      <td colspan="2">Surge: EN61000-4-5, Level 2</td>
+    </tr>
+    <tr>
+      <td rowspan="4">Certification</td>
+      <td colspan="2">CE, FCC</td>
+    </tr>
+    <tr>
+      <td colspan="2">TELEC</td>
+    </tr>
+    <tr>
+      <td colspan="2">RoHS</td>
+    </tr>
+    <tr>
+      <td colspan="2">REACH</td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>Ambient Conditions</strong></td>
+    </tr>
+    <tr>
+      <td>Ingress Protection</td>
+      <td colspan="2">IP40</td>
+    </tr>
+    <tr>
+      <td>Operating Temperature</td>
+      <td colspan="2">-30~70 °C</td>
+    </tr>
+    <tr>
+      <td>Operating Humidity</td>
+      <td colspan="2">10~95% RH</td>
+    </tr>
+    <tr>
+      <td>Storage Temperature</td>
+      <td colspan="2">-40~80 °C</td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>Others</strong></td>
+    </tr>
+    <tr>
+      <td>Supercapacitor UPS</td>
+      <td colspan="2">SuperCAP UPS LTC3350 Module*</td>
+    </tr>
+  </tbody>
+</table>
