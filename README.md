@@ -1075,6 +1075,42 @@ If network formation is successful, enter transparent mode by sending command `5
 Ensure you replace /dev/ttyUSB* with the correct serial port for each Zigbee module. Follow these steps carefully to test Zigbee communication between the two modules successfully.
 
 
+### PoE
+
+The reComputer R1000 worked as powered devices can support the IEEE 802.3af standard by adding a PoE power supply module. The seat for PoE is pre-soldered on board; however, users need to disassemble the device to install the PoE module for Ethernet PoE function.
+
+
+> [!NOTE]
+> The reComputer R1000 supports PoE power supply, but the standard product does not include a PoE module by default. Seeed can provide PoE soldering and assembly services for batch customization orders. However, if a customer is testing a sample, they will need to [solder and assemble the PoE module themselves](https://wiki.seeedstudio.com/recomputer_r1000_hardware_guide/#assemble-ups-and-poe-module).
+
+
+### SSD
+
+The reComputer R1000 supports 2280 NVMe SSD through the use of a PCIe slot(J62) below two Mini-PCIe slots on board. It is important to note that the CM4's PCIe is gen2.0 with a maximum theoretical speed of 5Gbps. If you are using a Gen3.0 or higher SSD, it may not be able to achieve the SSD's maximum speed. After testing, the reTerminal DM with installed SSD can achieve a maximum write speed of 230MB/s and a maximum read speed of 370MB/s. If you are unsure which SSDs are compatible, you can purchase following the accessories list below.
+
+[Please click here for assemble instruction](https://wiki.seeedstudio.com/recomputer_r1000_hardware_guide/#assemble-ssd).
+
+<table align= center>
+  <tbody>
+    <tr style="height: 18px;">
+      <td rowspan="4" style="height: 18px; width: 25%;">SSD card</td>
+      <td style="height: 18px; width: 50%;">NVMe M.2 2280 SSD 1TB</td>
+      <td style="height: 18px; width: 25%;"><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html">112990267</a></td>
+    </tr>
+    <tr style="height: 18px;">
+      <td style="height: 18px; width: 50%;">512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD</td>
+      <td style="height: 18px; width: 25%;"><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html">112990247</a></td>
+    </tr>
+    <tr style="height: 18px;">
+      <td style="height: 18px; width: 50%;">256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD</td>
+      <td style="height: 18px; width: 25%;"><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html">112990246</a></td>
+    </tr>
+    <tr style="height: 18px;">
+      <td style="height: 18px; width: 50%;">128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD</td>
+      <td style="height: 18px; width: 25%;"><a href="https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html">112990226</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
 
