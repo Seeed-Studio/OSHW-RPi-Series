@@ -13,7 +13,6 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
 - [reComputer R Series](#recomputer-r-series)
 - [Table of Contents](#table-of-contents)
   - [Features](#features)
-  - [Options marked with \* require additional purchase according to accessories](#options-marked-with--require-additional-purchase-according-to-accessories)
   - [Hardware Overview](#hardware-overview)
   - [Mainboard Overview](#mainboard-overview)
   - [Power Diagram](#power-diagram)
@@ -262,6 +261,7 @@ The reComputer R1000 edge IoT controller is built on the high-performance Raspbe
 </table>
 
 Options marked with * require additional purchase according to accessories
+
 ---
 ## Hardware Overview
 
