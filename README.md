@@ -8,6 +8,57 @@
 The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP ,and KNX protocols. With robust IoT network communication capabilities, the R1000 series supports multiple wireless communication options including 4G, LoRa®, Wi-Fi/BLE, allowing for flexible configurations to serve as corresponding wireless gateways. This controller is well-suited for remote device management, energy management, and various other scenarios in the field of smart buildings.
 
 ---
+
+## Table of Contents
+
+- [reComputer R Series](#recomputer-r-series)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Hardware Overview](#hardware-overview)
+  - [Mainboard Overview](#mainboard-overview)
+  - [Power Diagram](#power-diagram)
+    - [2-Pin Power terminal](#2-pin-power-terminal)
+    - [POE (optional)](#poe-optional)
+    - [Power Consumption](#power-consumption)
+    - [Power On and Power Off](#power-on-and-power-off)
+  - [Block Diagram](#block-diagram)
+    - [IIC Diagram](#iic-diagram)
+  - [Interfaces](#interfaces)
+    - [LED Indicator Status](#led-indicator-status)
+    - [Buzzer](#buzzer)
+    - [RS485](#rs485)
+    - [Boot Switch](#boot-switch)
+    - [USB](#usb)
+    - [SIM Slot](#sim-slot)
+    - [SSD Slot](#ssd-slot)
+    - [Mini-PCle Slot](#mini-pcle-slot)
+    - [Reset Hole](#reset-hole)
+    - [Ethernet RJ45](#ethernet-rj45)
+    - [HDMI](#hdmi)
+    - [RTC](#rtc)
+    - [Watchdog](#watchdog)
+  - [These steps will help you test and ensure the functionality of the watchdog timer on your system.](#these-steps-will-help-you-test-and-ensure-the-functionality-of-the-watchdog-timer-on-your-system)
+  - [Optional Interfaces and Modules](#optional-interfaces-and-modules)
+    - [Wi-Fi/BLE](#wi-fible)
+      - [Connect wifi](#connect-wifi)
+      - [Connect bluetooth devices](#connect-bluetooth-devices)
+    - [4G Module](#4g-module)
+    - [LoRa® Module](#lora-module)
+      - [WM1302 SPI Module](#wm1302-spi-module)
+      - [WM1302 USB Module](#wm1302-usb-module)
+    - [Zigbee Module](#zigbee-module)
+      - [To test Zigbee communication with two Zigbee modules, follow these steps:](#to-test-zigbee-communication-with-two-zigbee-modules-follow-these-steps)
+    - [PoE](#poe)
+    - [SSD](#ssd)
+    - [Encryption Chip TPM 2.0](#encryption-chip-tpm-20)
+    - [UPS](#ups)
+    - [DSI \& Speaker](#dsi--speaker)
+  - [Additional Resources](#additional-resources)
+
+
+
+
+
 ## Features
 
 <table align="center">
@@ -265,6 +316,8 @@ To query GPIO mappings and offsets, please use following command:
 ```bash
 cat /sys/kernel/debug/gpio
 ```
+## Interfaces
+
 ### LED Indicator Status
 
 The reComputer R1000 features 6 LED indicators that serve to signal the machine's operational status. Please refer to the table below for the specific functions and status of each LED:
