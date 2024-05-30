@@ -887,7 +887,7 @@ Please note that if you require LoRa® functionality, it is necessary to purchas
 
 #### WM1302 SPI Module
 
-**Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
+**Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](https://wiki.seeedstudio.com/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
 
 
 **Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
@@ -950,6 +950,133 @@ Then run the following code to start LoraWAN® Module according to your WM1302 o
 cd ~/sx1302_hal/packet_forwarder
 ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 ```
+#### WM1302 USB Module
+
+**Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](https://wiki.seeedstudio.com/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 USB LoraWAN®  Module` into the `4G Mini PCIe slot` which you should see the *`4G`* slikscreen.
+
+
+**Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
+
+- Select Interface Options
+- Select I2C, then select **Yes** to enable it
+- Select Serial Port, then select **No** for "Would you like a login shell..." and select **Yes** for "Would you like the serial port hardware..."
+
+After this, please reboot Raspberry Pi to make sure these settings work.
+
+**Step 3.** Download the [WM1302 code](https://github.com/Lora-net/sx1302_hal) to reTerminal and compile it.
+
+```sh
+cd ~/
+git clone https://github.com/Lora-net/sx1302_hal
+cd sx1302_hal
+sudo vim ./libloragw/inc/loragw_i2c.h
+```
+
+Change `#define I2C_DEVICE "/dev/i2c-1"` to `#define I2C_DEVICE "/dev/i2c-3"`.
+
+```bash
+sudo make
+```
+
+**Step 4.** Copy the reset_lgw.sh script
+
+```bash
+vim ./tools/reset_lgw.sh
+```
+
+Modify the code:
+
+```bash
+SX1302_RESET_PIN=580     # SX1302 reset
+SX1302_POWER_EN_PIN=578  # SX1302 power enable
+SX1261_RESET_PIN=579     # SX1261 reset (LBT / Spectral Scan)
+// AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
+```
+
+```
+cp ./tools/reset_lgw.sh ./packet_forwarder/
+```
+
+**Step 5.** Modify the content of the `global_conf.json.sx1250.EU868.usb` configuration file:
+
+```sh
+cd packet_forwarder
+vim global_conf.json.sx1250.EU868.usb
+```
+
+Change `"com_path": "/dev/spidev0.0"` to `"com_path": "/dev/spidev0.1"`
+
+**Step 6.** Start LoraWAN® Module
+
+Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
+
+```sh
+cd ~/sx1302_hal/packet_forwarder
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868.usb
+```
+
+This command specifies the configuration file to be used for LoRa® USB.
+
+### Zigbee Module
+
+The Mini-PCIe slots offer support for Zigbee modules utilizing the USB protocol, allowing for seamless integration of Zigbee functionality into compatible devices. This feature enables efficient communication and control within Zigbee networks, enhancing the versatility and connectivity of the system. With two Mini-PCIe slots available for Zigbee modules, users have the flexibility to implement diverse applications for enhanced reliability.
+
+> [!NOTE]
+> Please note that if you require Zigbee functionality, it is necessary to purchase the corresponding Zigbee module and external antenna.
+[Please click here for assemble instruction](https://wiki.seeedstudio.com/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna).
+
+#### To test Zigbee communication with two Zigbee modules, follow these steps:
+
+**Step 1.** Check Serial Ports:
+Use the following command to check available serial ports:
+
+```bash
+cat /dev/ttyUSB*
+```
+
+**Step 2.** Install Serial Communication Tool:
+
+```bash
+sudo apt install minicom
+```
+
+**Step 3.** Open Serial Port for Coordinator (First Zigbee Module):
+
+```bash
+sudo minicom -D /dev/ttyUSB2 -b 1152008n1 -w -H
+```
+
+Follow these steps to configure the first Zigbee module:
+
+- Set as coordinator: Send command `55 04 00 05 00 05`, expect response `55 04 00 05 00 05`.<br />
+- Reset device: Press reset button or send command `55 07 00 04 00 FF FF 00 04`.<br />
+- Network formation: Send command `55 03 00 02 02`.<br />
+
+**Step 4.** Open Serial Port for Router (Second Zigbee Module):
+
+Open another instance of minicom and configure it for the second serial port with the same settings as before.
+
+Follow these steps to configure the second Zigbee module:
+
+- Set as router: Send command `55 04 00 05 01 04`, expect response `55 04 00 05 00 05`.<br />
+- Reset device: Press reset button or send command `55 07 00 04 00 FF FF 00 04`.<br />
+- Network formation: Send command `55 03 00 02 02`.<br />
+
+**Step 5.** Check Device Status:
+Send command `5 03 00 00 00` to check the device status. Expect a response similar to `55 2a 00 00 00 01 XX XX XX XX`, where `XX` represents device information.
+
+**Step 6.** Enter Transparent Mode:
+If network formation is successful, enter transparent mode by sending command `55 07 00 11 00 03 00 01 13`. Both modules should be in transparent mode for direct communication. To exit transparent mode, send `+++`.
+
+**Step 7.** Additional Notes:
+- If router configuration fails, the device may already be a coordinator. Leave the network using command `55 07 00 04 02 xx xx xx`.
+- Test transmission power using commands `55 04 0D 00 00 0D` (query) and `55 04 0D 01 XX XX` (set).
+
+Ensure you replace /dev/ttyUSB* with the correct serial port for each Zigbee module. Follow these steps carefully to test Zigbee communication between the two modules successfully.
+
+
+
+
 
 
 
