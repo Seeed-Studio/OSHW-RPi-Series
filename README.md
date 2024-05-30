@@ -493,3 +493,46 @@ There is a Mini Push Button Switch located in the reset hole of reComputer R1000
     </tbody>
     </table>
 
+
+The reComputer R1000 comes with two Ethernet RJ45 ports. ETH0 is a CM4 native Gigabit Ethernet interface that supports three different speeds: 10/100/1000 Mbit/s. An additional PoE module can be purchased to enable power-over-Ethernet (PoE) delivery through this interface, providing power to the reComputer R1000. Another one ETH1 supports 10/100 Mbit/s which is converted from USB.
+
+### HDMI
+
+The reComputer R1000 features a native HDMI interface from CM4, supporting up to 4K @ 60 fps video output. It is ideal for applications that require multiple displays, allowing users to output their content to external large screens.
+
+### RTC
+
+The reComputer R1000 features an RTC circuit that comes pre-installed with a CR2032 battery, enabling it to maintain timekeeping functionality even in the event of power loss.
+
+To test the Real-Time Clock (RTC) functionality, follow these steps:
+1. Disable automatic time synchronization:
+
+```
+sudo systemctl stop systemd-timesyncd
+sudo systemctl disable systemd-timesyncd
+```
+
+2. Set the time to 12:00 PM on March 20, 2024:
+
+```
+sudo hwclock --set --date "2024-03-20 12:00:00"
+```
+
+3. Synchronize the RTC time to the system:
+
+```
+sudo hwclock --hctosys
+```
+
+4. Check the RTC time:
+
+```
+sudo hwclock -r
+```
+
+This command will read and display the time stored in the RTC.
+5. Disconnect the power source from the RTC, wait a few minutes, then reconnect it and check the RTC time again to see if it retained the correct time.
+
+
+
+
