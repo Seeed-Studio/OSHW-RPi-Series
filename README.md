@@ -531,8 +531,69 @@ sudo hwclock -r
 ```
 
 This command will read and display the time stored in the RTC.
+
 5. Disconnect the power source from the RTC, wait a few minutes, then reconnect it and check the RTC time again to see if it retained the correct time.
 
 
+### Watchdog
+
+The reComputer R1000 comes equipped with an independent hardware watchdog circuit that ensures automatic system reboot in case of abnormal system crashes. The watchdog circuit is implemented through RTC and allows for flexible feeding times from 1 to 255 seconds.
+
+To perform a watchdog test, follow these steps:
+
+1. Install the watchdog software:
+
+```bash
+sudo apt install watchdog 
+```
+
+2. Edit the watchdog configuration file:
+
+```bash
+# make sure you install vim already, if haven't, can install by the command below
+sudo apt-get install vim
+sudo vim /etc/watchdog.conf
+```
+
+Modify the configuration as follows:
+
+```bash
+watchdog-device		= /dev/watchdog
+# Uncomment and edit this line for hardware timeout values that differ
+# from the default of one minute.vi
+watchdog-timeout	= 120
+# If your watchdog trips by itself when the first timeout interval
+# elapses then try uncommenting the line below and changing the
+# value to 'yes'.
+#watchdog-refresh-use-settimeout	= auto
+# If you have a buggy watchdog device (e.g. some IPMI implementations)
+# try uncommenting this line and setting it to 'yes'.
+#watchdog-refresh-ignore-errors	= no
+# ====================== Other system settings ========================
+#
+# Interval between tests. Should be a couple of seconds shorter than
+# the hardware time-out value.
+interval		= 15
+max-load-1		= 24
+#max-load-5		= 18
+#max-load-15		= 12
+realtime		= yes
+priority		= 1
+```
+
+You can adjust other settings as needed.
+3. Ensure the watchdog service is running:
+
+```bash
+sudo systemctl start watchdog
+```
+
+4. To test the watchdog functionality, execute the following command to simulate a system hang:
+
+```bash
+sudo su
+echo 1 > /proc/sys/kernel/sysrq
+echo "c" > /proc/sysrq-trigger
+```
 
 
