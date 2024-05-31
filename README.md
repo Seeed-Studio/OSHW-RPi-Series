@@ -281,7 +281,7 @@ The reComputer R1000 supports three power supply options: AC, DC terminal and Po
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/powerplug.png" /></div>
 
-The reComputer R1000 is supplied with a nominal AC voltage of 12~24 V or DC voltage of 9~36V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer R1000, the ground wire can be secured to the screw located at the top left corner of the power terminal.
+The reComputer R1000 is supplied with a nominal AC voltage of 12-24 V or DC voltage of 9-36V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer R1000, the ground wire can be secured to the screw located at the top left corner of the power terminal.
 
 ### POE (optional)
 
