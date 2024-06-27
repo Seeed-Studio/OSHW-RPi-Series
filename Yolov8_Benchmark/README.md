@@ -61,11 +61,11 @@ The true result is as follows:
 ### Step 1. Install the repository
 
 ```
-https://github.com/Seeed-Projects/Benchmark-of-Yolo-on-CM4-with-AI-kit.git
+git clone https://github.com/Seeed-Projects/Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L.git
 ```
 ### Step 2. The following command to run the object 
 ```
-cd Benchmark-of-Yolo-on-CM4-with-AI-kit/object_detection_benchmark/Yolov8-with-AIkit
+cd Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L/object_detection_benchmark/Yolov8-with-AIkit
 bash ./run.sh
 ```
 ### Result
@@ -77,13 +77,13 @@ bash ./run.sh
 ### Step 1. Install the repository
 
 ```
-https://github.com/Seeed-Projects/Benchmark-of-Yolo-on-CM4-with-AI-kit.git
+git clone https://github.com/Seeed-Projects/Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L.git
 ```
 
 ### Step 2. The following command to run the object 
 
 ```
-cd Benchmark-of-Yolo-on-CM4-with-AI-kit/object_detection_benchmark/Yolov8-without-AIkit
+cd Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L/object_detection_benchmark/Yolov8-without-AIkit
 bash ./run.sh
 ```
 
