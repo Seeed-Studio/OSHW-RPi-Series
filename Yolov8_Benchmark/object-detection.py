@@ -4,7 +4,7 @@ import time
 model = YOLO("./yolo_model/yolov8s.onnx")
 total_frames = 744
 begin = time.time()
-result = model(source="./video/detection0.mp4", show=True, stream=True)
+result = model(source="./video/detection0.mp4", show=True)
 end = time.time()
 
 total_time = end - begin

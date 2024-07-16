@@ -180,8 +180,8 @@ bash ./run.sh pose-estimation-hailo
 ![image](./resource/YOLOv8-pose-estimation-with-AIkit.gif)
 
 # Results
+we test Yolov8s, with 640*640 input and int8 format. And we also test Yolov8s int8 on Jetson Orin NX 16GB with TensorRT accelerate. The result is shown as below:
 
-| Object | Without Hailo | With Hailo |
-| --- | --- | --- |
-| YOLOV8 Object Detection| 0.75FPS | 29.5FPS |
-| YOLOv8 Pose Estimation| 0.5FPS| 27FPS|
+<div align='center'><img width={600} src='./resource/ob.png'></div>
+
+<div align='center'><img width={600} src='./resource/po.png'></div>

@@ -1,0 +1,76 @@
+[2024-07-16 17:55:39.238] [7048] [HailoRT] [error] [driver_os_specific.cpp:31] [open_device_file] CHECK failed - Failed to open device file /dev/hailo0 with error 13
+[2024-07-16 17:55:39.238] [7048] [HailoRT] [error] [hailort_driver.cpp:126] [create] CHECK_SUCCESS failed with status=HAILO_DRIVER_FAIL(36)
+[2024-07-16 17:55:39.238] [7048] [HailoRT] [error] [pcie_device.cpp:68] [create] CHECK_SUCCESS failed with status=HAILO_DRIVER_FAIL(36)
+[2024-07-16 17:55:39.238] [7048] [HailoRT] [error] [device.cpp:134] [create_pcie] CHECK_SUCCESS failed with status=HAILO_DRIVER_FAIL(36)
+[2024-07-16 17:55:39.238] [7048] [HailoRT] [error] [vdevice.cpp:737] [create_devices] CHECK_SUCCESS failed with status=HAILO_DRIVER_FAIL(36)
+[2024-07-16 17:55:39.238] [7048] [HailoRT] [error] [vdevice.cpp:546] [create] CHECK_SUCCESS failed with status=HAILO_DRIVER_FAIL(36)
+[2024-07-16 17:55:39.238] [7048] [HailoRT] [error] [shared_resource_manager.hpp:81] [register_resource] CHECK_SUCCESS failed with status=HAILO_DRIVER_FAIL(36)
+[2024-07-16 17:55:39.238] [7048] [HailoRT] [error] [vdevice.cpp:135] [create] CHECK_SUCCESS failed with status=HAILO_DRIVER_FAIL(36)
+[2024-07-16 17:55:39.238] [7048] [HailoRT] [error] [vdevice.cpp:493] [create] CHECK_SUCCESS failed with status=HAILO_DRIVER_FAIL(36)
+[2024-07-16 18:02:01.032] [2829] [HailoRT] [info] [device.cpp:46] [Device] OS Version: Linux 6.6.31+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.6.31-1+rpt1 (2024-05-29) aarch64
+[2024-07-16 18:02:01.032] [2829] [HailoRT] [info] [control.cpp:100] [control__parse_identify_results] firmware_version is: 4.17.0
+[2024-07-16 18:02:01.032] [2829] [HailoRT] [info] [control.cpp:100] [control__parse_identify_results] firmware_version is: 4.17.0
+[2024-07-16 18:03:00.037] [2986] [HailoRT] [info] [device.cpp:46] [Device] OS Version: Linux 6.6.31+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.6.31-1+rpt1 (2024-05-29) aarch64
+[2024-07-16 18:03:00.037] [2986] [HailoRT] [info] [control.cpp:100] [control__parse_identify_results] firmware_version is: 4.17.0
+[2024-07-16 18:03:00.037] [2986] [HailoRT] [info] [vdevice.cpp:566] [create] VDevice Infos: 0000:01:00.0
+[2024-07-16 18:03:00.618] [2986] [HailoRT] [info] [hef.cpp:1802] [get_network_group_and_network_name] No name was given. Addressing all networks of default network_group: yolov8s
+[2024-07-16 18:03:00.618] [2986] [HailoRT] [info] [hef.cpp:1802] [get_network_group_and_network_name] No name was given. Addressing all networks of default network_group: yolov8s
+[2024-07-16 18:03:00.752] [3002] [HailoRT] [info] [internal_buffer_manager.cpp:208] [print_execution_results] Planned internal buffer memory: CMA memory 0, user memory 4551168. memory to edge layer usage factor is 1.0
+[2024-07-16 18:03:00.752] [3002] [HailoRT] [info] [internal_buffer_manager.cpp:216] [print_execution_results] Default Internal buffer planner executed successfully
+[2024-07-16 18:03:00.788] [3002] [HailoRT] [info] [device_internal.cpp:58] [configure] Configuring HEF took 47.858422 milliseconds
+[2024-07-16 18:03:00.789] [3002] [HailoRT] [info] [vdevice.cpp:665] [configure] Configuring HEF on VDevice took 52.782874 milliseconds
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [multi_io_elements.cpp:756] [create] Created (AsyncHwEl)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [queue_elements.cpp:420] [create] Created (EntryPushQEl0yolov8s/input_layer1 | timeout: 10s)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [filter_elements.cpp:110] [create] Created (PreInferEl3yolov8s/input_layer1 | Reorder - src_order: RGB4, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3))
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [queue_elements.cpp:420] [create] Created (PushQEl3yolov8s/input_layer1 | timeout: 10s)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [multi_io_elements.cpp:156] [create] Created (NmsPPMuxEl0YOLOV8-Post-Process | Op YOLOV8, Name: YOLOV8-Post-Process, Score threshold: 0.300, IoU threshold: 0.45, Classes: 80, Cross classes: false, Max bboxes per class: 100, Image height: 640, Image width: 640)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [queue_elements.cpp:420] [create] Created (PushQEl_nms9yolov8s/conv41_97 | timeout: 10s)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [queue_elements.cpp:420] [create] Created (PushQEl_nms7yolov8s/conv42_97 | timeout: 10s)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [queue_elements.cpp:420] [create] Created (PushQEl_nms1yolov8s/conv52_97 | timeout: 10s)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [queue_elements.cpp:420] [create] Created (PushQEl_nms0yolov8s/conv53_97 | timeout: 10s)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [queue_elements.cpp:420] [create] Created (PushQEl_nms3yolov8s/conv62_97 | timeout: 10s)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [queue_elements.cpp:420] [create] Created (PushQEl_nms2yolov8s/conv63_97 | timeout: 10s)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [edge_elements.cpp:191] [create] Created (LastAsyncEl0NmsPPMuxEl0YOLOV8-Post-Process)
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] EntryPushQEl0yolov8s/input_layer1 | inputs: user | outputs: PreInferEl3yolov8s/input_layer1
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] PreInferEl3yolov8s/input_layer1 | inputs: EntryPushQEl0yolov8s/input_layer1 | outputs: PushQEl3yolov8s/input_layer1
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] PushQEl3yolov8s/input_layer1 | inputs: PreInferEl3yolov8s/input_layer1 | outputs: AsyncHwEl
+[2024-07-16 18:03:00.792] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] AsyncHwEl | inputs: PushQEl3yolov8s/input_layer1 | outputs: PushQEl_nms3yolov8s/conv62_97 PushQEl_nms2yolov8s/conv63_97 PushQEl_nms1yolov8s/conv52_97 PushQEl_nms0yolov8s/conv53_97 PushQEl_nms9yolov8s/conv41_97 PushQEl_nms7yolov8s/conv42_97
+[2024-07-16 18:03:00.793] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] PushQEl_nms3yolov8s/conv62_97 | inputs: AsyncHwEl | outputs: NmsPPMuxEl0YOLOV8-Post-Process
+[2024-07-16 18:03:00.793] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] NmsPPMuxEl0YOLOV8-Post-Process | inputs: PushQEl_nms9yolov8s/conv41_97 PushQEl_nms7yolov8s/conv42_97 PushQEl_nms1yolov8s/conv52_97 PushQEl_nms0yolov8s/conv53_97 PushQEl_nms3yolov8s/conv62_97 PushQEl_nms2yolov8s/conv63_97 | outputs: LastAsyncEl0NmsPPMuxEl0YOLOV8-Post-Process
+[2024-07-16 18:03:00.793] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] LastAsyncEl0NmsPPMuxEl0YOLOV8-Post-Process | inputs: NmsPPMuxEl0YOLOV8-Post-Process | outputs: user
+[2024-07-16 18:03:00.793] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] PushQEl_nms2yolov8s/conv63_97 | inputs: AsyncHwEl | outputs: NmsPPMuxEl0YOLOV8-Post-Process
+[2024-07-16 18:03:00.793] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] PushQEl_nms1yolov8s/conv52_97 | inputs: AsyncHwEl | outputs: NmsPPMuxEl0YOLOV8-Post-Process
+[2024-07-16 18:03:00.793] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] PushQEl_nms0yolov8s/conv53_97 | inputs: AsyncHwEl | outputs: NmsPPMuxEl0YOLOV8-Post-Process
+[2024-07-16 18:03:00.793] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] PushQEl_nms9yolov8s/conv41_97 | inputs: AsyncHwEl | outputs: NmsPPMuxEl0YOLOV8-Post-Process
+[2024-07-16 18:03:00.793] [3002] [HailoRT] [info] [pipeline.cpp:831] [print_deep_description] PushQEl_nms7yolov8s/conv42_97 | inputs: AsyncHwEl | outputs: NmsPPMuxEl0YOLOV8-Post-Process
+[2024-07-16 18:03:00.797] [3002] [HailoRT] [info] [hef.cpp:1802] [get_network_group_and_network_name] No name was given. Addressing all networks of default network_group: yolov8s
+[2024-07-16 18:03:09.723] [2986] [HailoRT] [info] [async_infer_runner.cpp:86] [shutdown] Pipeline was aborted. Shutting it down
+[2024-07-16 18:03:09.723] [3017] [HailoRT] [info] [queue_elements.cpp:466] [operator()] Thread in element PushQEl3yolov8s/input_layer1 is not running anymore, exiting..
+[2024-07-16 18:03:09.723] [3016] [HailoRT] [info] [queue_elements.cpp:466] [operator()] Thread in element EntryPushQEl0yolov8s/input_layer1 is not running anymore, exiting..
+[2024-07-16 18:03:09.725] [2991] [HailoRT] [info] [network_group.cpp:810] [operator()] Infer request was aborted by user
+[2024-07-16 18:03:09.725] [2991] [HailoRT] [info] [network_group.cpp:810] [operator()] Infer request was aborted by user
+[2024-07-16 18:03:09.726] [2991] [HailoRT] [info] [network_group.cpp:810] [operator()] Infer request was aborted by user
+[2024-07-16 18:03:09.726] [2991] [HailoRT] [info] [network_group.cpp:810] [operator()] Infer request was aborted by user
+[2024-07-16 18:03:09.726] [2991] [HailoRT] [info] [network_group.cpp:810] [operator()] Infer request was aborted by user
+[2024-07-16 18:03:09.726] [2991] [HailoRT] [info] [network_group.cpp:810] [operator()] Infer request was aborted by user
+[2024-07-16 18:03:09.726] [2991] [HailoRT] [info] [network_group.cpp:810] [operator()] Infer request was aborted by user
+[2024-07-16 18:03:09.726] [2991] [HailoRT] [info] [network_group.cpp:810] [operator()] Infer request was aborted by user
+[2024-07-16 18:03:09.726] [3021] [HailoRT] [info] [queue_elements.cpp:466] [operator()] Thread in element PushQEl_nms0yolov8s/conv53_97 is not running anymore, exiting..
+[2024-07-16 18:03:09.726] [3019] [HailoRT] [info] [queue_elements.cpp:466] [operator()] Thread in element PushQEl_nms7yolov8s/conv42_97 is not running anymore, exiting..
+[2024-07-16 18:03:09.727] [3018] [HailoRT] [info] [queue_elements.cpp:466] [operator()] Thread in element PushQEl_nms9yolov8s/conv41_97 is not running anymore, exiting..
+[2024-07-16 18:03:09.728] [2986] [HailoRT] [info] [queue_elements.cpp:527] [execute_deactivate] enqueue() in element PushQEl_nms3yolov8s/conv62_97 was aborted, got status = HAILO_SHUTDOWN_EVENT_SIGNALED(57)
+[2024-07-16 18:03:09.728] [2986] [HailoRT] [info] [queue_elements.cpp:527] [execute_deactivate] enqueue() in element PushQEl_nms2yolov8s/conv63_97 was aborted, got status = HAILO_SHUTDOWN_EVENT_SIGNALED(57)
+[2024-07-16 18:03:09.728] [2986] [HailoRT] [info] [queue_elements.cpp:527] [execute_deactivate] enqueue() in element PushQEl_nms1yolov8s/conv52_97 was aborted, got status = HAILO_SHUTDOWN_EVENT_SIGNALED(57)
+[2024-07-16 18:03:09.728] [2986] [HailoRT] [info] [queue_elements.cpp:527] [execute_deactivate] enqueue() in element PushQEl_nms0yolov8s/conv53_97 was aborted, got status = HAILO_SHUTDOWN_EVENT_SIGNALED(57)
+[2024-07-16 18:03:09.728] [2986] [HailoRT] [info] [queue_elements.cpp:527] [execute_deactivate] enqueue() in element PushQEl_nms9yolov8s/conv41_97 was aborted, got status = HAILO_SHUTDOWN_EVENT_SIGNALED(57)
+[2024-07-16 18:03:09.728] [2986] [HailoRT] [info] [queue_elements.cpp:527] [execute_deactivate] enqueue() in element PushQEl_nms7yolov8s/conv42_97 was aborted, got status = HAILO_SHUTDOWN_EVENT_SIGNALED(57)
+[2024-07-16 18:03:09.728] [2986] [HailoRT] [info] [queue_elements.cpp:527] [execute_deactivate] enqueue() in element PushQEl3yolov8s/input_layer1 was aborted, got status = HAILO_SHUTDOWN_EVENT_SIGNALED(57)
+[2024-07-16 18:03:09.728] [2986] [HailoRT] [info] [queue_elements.cpp:527] [execute_deactivate] enqueue() in element EntryPushQEl0yolov8s/input_layer1 was aborted, got status = HAILO_SHUTDOWN_EVENT_SIGNALED(57)
+[2024-07-16 18:03:09.728] [2986] [HailoRT] [info] [queue_elements.cpp:43] [~BaseQueueElement] Queue element EntryPushQEl0yolov8s/input_layer1 has 0 frames in his Queue on destruction
+[2024-07-16 18:03:09.728] [2986] [HailoRT] [info] [queue_elements.cpp:43] [~BaseQueueElement] Queue element PushQEl3yolov8s/input_layer1 has 0 frames in his Queue on destruction
+[2024-07-16 18:03:09.729] [2986] [HailoRT] [info] [queue_elements.cpp:43] [~BaseQueueElement] Queue element PushQEl_nms9yolov8s/conv41_97 has 0 frames in his Queue on destruction
+[2024-07-16 18:03:09.729] [2986] [HailoRT] [info] [queue_elements.cpp:43] [~BaseQueueElement] Queue element PushQEl_nms7yolov8s/conv42_97 has 0 frames in his Queue on destruction
+[2024-07-16 18:03:09.729] [2986] [HailoRT] [info] [queue_elements.cpp:43] [~BaseQueueElement] Queue element PushQEl_nms1yolov8s/conv52_97 has 0 frames in his Queue on destruction
+[2024-07-16 18:03:09.730] [2986] [HailoRT] [info] [queue_elements.cpp:43] [~BaseQueueElement] Queue element PushQEl_nms0yolov8s/conv53_97 has 0 frames in his Queue on destruction
+[2024-07-16 18:03:09.730] [2986] [HailoRT] [info] [queue_elements.cpp:43] [~BaseQueueElement] Queue element PushQEl_nms3yolov8s/conv62_97 has 0 frames in his Queue on destruction
+[2024-07-16 18:03:09.730] [2986] [HailoRT] [info] [queue_elements.cpp:43] [~BaseQueueElement] Queue element PushQEl_nms2yolov8s/conv63_97 has 0 frames in his Queue on destruction
