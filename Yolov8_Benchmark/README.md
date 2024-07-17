@@ -109,7 +109,7 @@ dtparam=pciex1_gen=3
 
 # Run this project
 
-## Run object detection on the Recomputer1000 without AI kit
+## Run object detection AI kit
 
 ### Step 1. Install the repository
 
@@ -125,7 +125,7 @@ bash ./run.sh object-detection
 
 ![image](./resource/without_hailo.gif)
 
-## Run object detection on the Recomputer1000 with AI kit
+## Run object detection with AI kit
 
 ### Step 1. Install the repository
 
@@ -143,7 +143,7 @@ bash ./run.sh object-detection-hailo
 ### Result
 ![image](./resource/with_hailo.gif)
 
-## Run pose estimation on the Recomputer1000 without AI kit
+## Run pose estimation without AI kit
 
 ### Step 1. Install the repository
 
@@ -160,7 +160,7 @@ bash ./run.sh pose-estimation
 
 ![image](./resource/YOLOv8-pose-estimation-without-AIkit.gif)
 
-## Run pose estimation on the Recomputer1000 with AI kit
+## Run pose estimation with AI kit
 
 ### Step 1. Install the repository
 
@@ -183,5 +183,6 @@ bash ./run.sh pose-estimation-hailo
 we test Yolov8s, with 640*640 input and int8 format. And we also test Yolov8s int8 on Jetson Orin NX 16GB with TensorRT accelerate. The result is shown as below:
 
 <div align='center'><img width={600} src='./resource/ob.png'></div>
+
 
 <div align='center'><img width={600} src='./resource/po.png'></div>
