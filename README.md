@@ -67,7 +67,7 @@ At Seeed Studio, we offer the entire Raspberry Pi family of boards as well as co
         <th>Raspberry Pi CM4 </th>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry-Pi-5/PI_5_HERO.png" style={{width:245, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font_1.jpg" style={{width:245, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry-Pi-5/Rpi4.PNG" style={{width:245, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry-Pi-5/rpicm4.PNG" style={{width:245, height:'auto'}}/></div></td>
     </tr>
@@ -138,3 +138,79 @@ At Seeed Studio, we offer the entire Raspberry Pi family of boards as well as co
 |USB Ports|x4(A)|x1(Micro)|x1(Micro)|x4(A),x1(C)|❌|x1(Micro)|x1(Micro)|x4(A),x1(C)|
 |I2C Ports|x1|x1|x1|x1|x1|x1|x2|x1|
 |SPI Ports|x1|x1|x1|x1|x1|x1|x2|x1|
+
+### Hats (extension boards)
+
+#### Grove Base Hat for Raspberry Pi
+
+Add-on board that provides an array of Digital/Analog/I2C/PWM/UART ports to meet all your needs.This will be Compatible With: 3B+, 4B
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/main.jpg" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+#### Grove Base Hat for Raspberry Pi Zero
+
+Add-on board that provides an array of Digital/Analog/I2C/PWM/UART ports to meet all your needs in the pHat form factor of the RPi Zero family.This will be Compatible With: 3B+, 4B
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi_Zero/img/main.jpg" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+#### WM1302 Raspberry Pi Hat
+
+Add-on board for connecting the WM1302 LoRaWAN module, based on LoRa Concentrator Semtech SX1302.This will be Compatible With: 3B+, 4B, Zero, Zero W/WH
+
+<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/w/m/wm1302_pihat_preview-16_1.png" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/WM1302-Pi-Hat-p-4897.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+#### LTE Cat 1 Pi HAT
+
+Open-source cellular extension modem for Raspberry Pi, based on u-blox LARA-R2xx series. This will be Compatible With: 3B+, 4B, Zero, Zero W/WH.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/overview.JPG" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/LTE-Cat-1-Pi-HAT-USA-AT--p-3056.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+#### ReSpeaker 2-Mics Pi HAT
+
+Dual-microphone expansion board for Raspberry Pi designed for AI and voice applications.This will be Compatible With: 3B+, 4B, Zero, Zero W/WH.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/products/107100001/01.png" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+#### ReSpeaker 4-Mics Pi HAT
+
+Quad-microphone expansion board for Raspberry Pi designed for more powerful AI and voice applications.This will be Compatible With: 3B+, 4B.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/overview.jpg" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+### Accessories
+
+#### Skeleton Box for Raspberry Pi Compute Module Development Kit
+
+Constructed from military grade aluminum and hardwearing acrylic, this box is stackable in all three dimensions, allowing for limitless expansion possibilities. This will be Compatible With: CM4.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/img/Pic_2100.bmp" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/Skeleton-Box-for-Raspberry-Pi-Compute-Module.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+#### Skeleton Box for Raspberry Pi
+
+Provides all the basic elements you need to collect and transfer data from all your LoRa nodes. Build your IOT prototype within minutes. This will be Compatible With: 3B+,4B.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Skeleton_box_for_Rasberry_Pi/img/Pi_skeleton_02.jpg" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/Skeleton-box-for-Raspberry-Pi.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+#### Raspberry PI B+ Clear Case
+
+An easy to assemble clear acryllic case, made using a better-performing 4-piece design over the standard 6-piece.This will be Compatible With: 3B+.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Raspberry_PI_Bplus_Case/img/IMG_9955b.jpg" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/Raspberry-Pi-Model-B-2-Case.html?queryID=f4fedf9ea695b42efea237236cb2a0ab&objectID=1036&indexName=bazaar_retailer_products" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
