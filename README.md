@@ -1,4 +1,7 @@
-# Edge Devices Powered By Raspberry Pi
+
+# Join Our Community:  Navigating the Roadmap of Raspberry Pi and Open Source Hardware
+
+# Edge Devices Powered By Raspberry Pi Presented by Seeed Studio
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/ReTerminal/banner.png" /></div>
 
@@ -47,3 +50,91 @@ All-in-one industrial edge computing controllers based on Raspberry Pi. High-sca
 
 
 <p align="center"><a href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4108032-p-5598.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+# Raspberry Pi Platform Devices 
+
+Raspberry Pi (aka "RPi") was originally designed and created by a non-profit organization with the intention to promote teaching computer science at an affordable cost. Several generations and models of Raspberry Pis have now been released that have expanded their footprints, power and applications.
+
+At Seeed Studio, we offer the entire Raspberry Pi family of boards as well as complementary accessories and starter kits that can help you create projects centered around the product. Additionally, we have created many tutorials in Seeed’s Raspberry Pi community where you can easily find references to build your own circuits or write your own applications.
+
+## Raspberry Pi Official Boards
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>Raspberry Pi 5</th>
+        <th>Raspberry Pi 4B</th>
+        <th>Raspberry Pi CM4 </th>
+    </tr>
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry-Pi-5/PI_5_HERO.png" style={{width:245, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry-Pi-5/Rpi4.PNG" style={{width:245, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry-Pi-5/rpicm4.PNG" style={{width:245, height:'auto'}}/></div></td>
+    </tr>
+      <tr>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html?queryID=4c4d10c552d06c2fff559be44393d2c2&objectID=5810&indexName=bazaar_retailer_products">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html?queryID=83ec53ef0888ac5e7b624cbab04bda83&objectID=4595&indexName=bazaar_retailer_products">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-Compute-Module-CM4108032-p-5220.html">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+    </tr>
+  </table>
+</div>
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>Raspberry Pi 3B+</th>
+        <th>Raspberry Pi Zero W</th>
+        <th>Raspberry Pi Pico W</th>
+        </tr>
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry-Pi-5/rpi3b1.PNG" style={{width:245, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry-Pi-5/zero.PNG" style={{width:245, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry-Pi-5/pico.PNG" style={{width:245, height:'auto'}}/></div></td>
+    </tr>
+      <tr>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B--p-3037.html?queryID=2e94439a190d1067dce55f035a271d2c&objectID=155&indexName=bazaar_retailer_products">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-Zero-2-W-p-5197.html?queryID=7cca0fc783dccc443e6098c52e317013&objectID=5197&indexName=bazaar_retailer_products">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-Pico-W-p-5429.html?queryID=766c831ec863c00c004f2766dea2358c&objectID=5429&indexName=bazaar_retailer_products">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+    </tr>
+  </table>
+</div>
+
+
+## Compare Raspberry Pi Models
+|               | 3B+           |   Zero      |   Zero 2 W/WH     |   4B          |   CM4     | Pico | Pico WH |   5          |
+|   :---:       | :---:         |   :---:     |   :---:         |   :---:       |   :---:   | :---: | :---: |:---: |
+|   RAM         |1GB          |512MB          |512MB          |2/4/8 GB       |2/4/8 GB   | 264 KB |264 KB |4/8 GB |
+|   Storage     |Micro SD          |Micro SD          |Micro SD          |Micro SD      |Up to 32GB eMMC   | 2 MB |2 MB |Micro SD |
+|   Processor Type     |ARMv8 x86       |ARMv6         |ARMv6        |ARMv8 x64     |ARMv8 x64 |ARM M0+ |ARM M0+ |ARMv8 x64  |
+| Processor Speed | Quad Core @1.4GHz  |1GHz |Quad Core @1GHz |Quad Core @1.5GHz|Quad Core @1.5GHz|Dual Core @133MHz|Dual Core @133MHz|Quad Core @2.4Hz|
+| Form Factor   | Standard [a]    |pHat |pHat |Standard [a] | Ultra-compact [c] |Through-Hole SOM |Through-Hole SOM |Standard [a]|
+|Ethernet   |✅|❌|❌|✅|✅|❌|❌|✅|
+|Wifi       |❌|❌|✅|✅|❌|❌|✅|✅|
+|Bluetooth  |❌|❌|✅|✅|❌|❌|✅|✅|
+|USB Ports|x4(A)|x1(Micro)|x1(Micro)|x4(A),x1(C)|❌|x1(Micro)|x1(Micro)|x4(A),x1(C)|
+|I2C Ports|x1|x1|x1|x1|x1|x1|x2|x1|
+|SPI Ports|x1|x1|x1|x1|x1|x1|x2|x1|
