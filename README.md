@@ -139,7 +139,31 @@ At Seeed Studio, we offer the entire Raspberry Pi family of boards as well as co
 |I2C Ports|x1|x1|x1|x1|x1|x1|x2|x1|
 |SPI Ports|x1|x1|x1|x1|x1|x1|x2|x1|
 
+### Pi camera modules
+The Raspberry Pi Camera, commonly referred to as PiCam, is a camera module specifically designed for the Raspberry Pi single-board computers. It offers a compact and convenient solution for capturing images and recording videos directly from your Raspberry Pi device.
+
+| Raspberry Pi Camera Module V1|Raspberry Pi Camera Module V2| Raspberry Pi Camera Module 3 |
+|----------|---------------------|--------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/pi_cam3.jpg)|
+|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-Module-p-1659.html?queryID=9e37f656a0eb0086c424e93bcfffadf4&objectID=1242&indexName=bazaar_retailer_products)|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-Module-V2.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-3-p-5574.html?queryID=11243e5e9f95c4f4f0716b229dd8dcf0&objectID=5574&indexName=bazaar_retailer_products)|
+
+|Raspberry Pi Camera Module 3 Wide NoIR | Raspberry Pi Camera Module 3 NoIR | Raspberry Pi Camera Module 3 Wide |
+|----------|---------------------|--------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/picamWN.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/picamnoir.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam3w.jpg)|
+|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-3-Wide-NoIR-p-5577.html?queryID=f7e448b5e2e91156540a55c164fe9806&objectID=5577&indexName=bazaar_retailer_products)|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-3-NoIR-p-5575.html?queryID=580ed0215d20c7d125b592090e007ba6&objectID=5575&indexName=bazaar_retailer_products)|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-3-Wide-p-5576.html?queryID=b165ed9d2e2ff82f45003dbb7c921182&objectID=5576&indexName=bazaar_retailer_products)|
+
+Do you want to explore more?
+<p align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=pi%20cams" target="_blank"><b><strong>🖱️ Click Here</strong></b></a></p>
+
 ### Hats (extension boards)
+
+#### Raspberry Pi AI Kit
+
+The Raspberry Pi AI Kit bundles the Raspberry Pi M.2 HAT+ with a Hailo AI acceleration module for use with Raspberry Pi 5. It provides an accessible, cost-effective, and powerefficient way to integrate high-performance AI. Explore applications including process control, security, home automation, and robotics.
+
+<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
 #### Grove Base Hat for Raspberry Pi
 
@@ -189,6 +213,22 @@ Quad-microphone expansion board for Raspberry Pi designed for more powerful AI a
 
 <p align="center"><a href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
+#### STM32F030 8-Channel 12-Bit ADC for Raspberry Pi
+
+Raspberry Pi does not include a hardware analog-to-digital converter, so the external ADC (such as the MCP3008) plays an important role in converting continuous time-varying analog signals into discrete-time digital signals so that they can easily be read by the digital devices.
+
+<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/p/e/perspective_1_1.jpg" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/8-Channel-12-Bit-ADC-for-Raspberry-Pi-STM32F030.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+#### 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)
+
+This shield is a 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD), supports the CAN FD protocol and supports transmission speed up to 8 Mbps.
+
+<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/103990563_preview-07.png" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/CAN-BUS-FD-HAT-for-Raspberry-Pi-p-4742.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
 ### Accessories
 
 #### Skeleton Box for Raspberry Pi Compute Module Development Kit
@@ -214,3 +254,28 @@ An easy to assemble clear acryllic case, made using a better-performing 4-piece 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Raspberry_PI_Bplus_Case/img/IMG_9955b.jpg" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/Raspberry-Pi-Model-B-2-Case.html?queryID=f4fedf9ea695b42efea237236cb2a0ab&objectID=1036&indexName=bazaar_retailer_products" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+
+#### Water Cooling Kit for Raspberry Pi 5
+
+The first water cooling kit specially designed for Raspberry Pi 5, which is a collaborative product released by Seeed Studio and 52Pi, can control the temperature of a single fully loaded Raspberry Pi 5 at about 40℃. Each water cooling kit is capable of simultaneously cooling multiple Raspberry Pi 5 units, offering a cooling solution for Raspberry Pi 5 cluster management.
+
+<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/6/-/6-110070128-high-performance-liquid-cooler-for-raspberry-pi-5-feature.jpg" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/High-Performance-Liquid-Cooler-for-Raspberry-Pi-5-p-5854.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+#### Raspberry Pi Official Active Cooler
+
+Raspberry Pi Active Cooler is an official accessory designed for the Raspberry Pi 5, providing an alternative cooling solution for sustained heavy load usage without a case. It combines a large metal heatsink with a variable-speed blower, powered and controlled via the fan connector.
+
+<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993229-active-cooler-first.jpg" /></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/Raspberry-Pi-Active-Cooler-p-5813.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
+
+#### ICE Tower CPU Cooling Fan for Raspberry Pi
+
+The ICE Tower CPU Cooling Fan is designed for Raspberry Pi 5 and provides efficient cooling to enhance the performance and longevity of the device.
+
+<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/6/-/6-114070241-ice-tower-cooler-for-raspberry-pi5-feature.jpg"></div>
+
+<p align="center"><a href="https://www.seeedstudio.com/ICE-Tower-CPU-Cooling-Fan-for-Raspberry-Pi-Support-Pi-5-p-5814.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
