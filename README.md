@@ -36,7 +36,9 @@ Introducing reTerminal DM, a 10.1" open-source industrial Human-Machine Interfac
 
 The reComputer R1000 is a high-performance, cost-effective edge IoT controller based on Raspberry Pi. It has dual Ethernet interfaces, three isolated RS485 interfaces, and supports Modbus UDP/TCP and BACnet protocols, making it ideal for smart building and energy management, including HVAC, lighting, sensors, and access control. It also offers extensive wireless capabilities, including 4G, LoRa®, Zigbee, Wi-Fi, and BLE.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" /></div>
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" width="500" />
+</div>
 
 
 <p align="center"><a href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
@@ -45,8 +47,9 @@ The reComputer R1000 is a high-performance, cost-effective edge IoT controller b
 
 All-in-one industrial edge computing controllers based on Raspberry Pi. High-scalability, rugged design, rich IO resources, and compatibility with the Raspberry Pi industrial software ecosystem make it an ideal choice for smart automation and IIoT solutions.
 
-
-<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" /></div>
+<div align="center">
+  <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" width="500" />
+</div>
 
 
 <p align="center"><a href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4108032-p-5598.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
@@ -161,7 +164,9 @@ Do you want to explore more?
 
 The Raspberry Pi AI Kit bundles the Raspberry Pi M.2 HAT+ with a Hailo AI acceleration module for use with Raspberry Pi 5. It provides an accessible, cost-effective, and powerefficient way to integrate high-performance AI. Explore applications including process control, security, home automation, and robotics.
 
-<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" /></div>
+<div align="center">
+  <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" width="500" />
+</div>
 
 <p align="center"><a href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -169,7 +174,7 @@ The Raspberry Pi AI Kit bundles the Raspberry Pi M.2 HAT+ with a Hailo AI accele
 
 Add-on board that provides an array of Digital/Analog/I2C/PWM/UART ports to meet all your needs.This will be Compatible With: 3B+, 4B
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/main.jpg" /></div>
+<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/main.jpg" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -177,7 +182,7 @@ Add-on board that provides an array of Digital/Analog/I2C/PWM/UART ports to meet
 
 Add-on board that provides an array of Digital/Analog/I2C/PWM/UART ports to meet all your needs in the pHat form factor of the RPi Zero family.This will be Compatible With: 3B+, 4B
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi_Zero/img/main.jpg" /></div>
+<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi_Zero/img/main.jpg" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -185,7 +190,7 @@ Add-on board that provides an array of Digital/Analog/I2C/PWM/UART ports to meet
 
 Add-on board for connecting the WM1302 LoRaWAN module, based on LoRa Concentrator Semtech SX1302.This will be Compatible With: 3B+, 4B, Zero, Zero W/WH
 
-<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/w/m/wm1302_pihat_preview-16_1.png" /></div>
+<div align="center"><img width="500" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/w/m/wm1302_pihat_preview-16_1.png" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/WM1302-Pi-Hat-p-4897.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -193,7 +198,7 @@ Add-on board for connecting the WM1302 LoRaWAN module, based on LoRa Concentrato
 
 Open-source cellular extension modem for Raspberry Pi, based on u-blox LARA-R2xx series. This will be Compatible With: 3B+, 4B, Zero, Zero W/WH.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/overview.JPG" /></div>
+<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/LTE_Cat_1_Pi_HAT/Img/overview.JPG" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/LTE-Cat-1-Pi-HAT-USA-AT--p-3056.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -201,7 +206,7 @@ Open-source cellular extension modem for Raspberry Pi, based on u-blox LARA-R2xx
 
 Dual-microphone expansion board for Raspberry Pi designed for AI and voice applications.This will be Compatible With: 3B+, 4B, Zero, Zero W/WH.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/products/107100001/01.png" /></div>
+<div align="center"><img width="500" src="https://files.seeedstudio.com/products/107100001/01.png" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -209,7 +214,7 @@ Dual-microphone expansion board for Raspberry Pi designed for AI and voice appli
 
 Quad-microphone expansion board for Raspberry Pi designed for more powerful AI and voice applications.This will be Compatible With: 3B+, 4B.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/overview.jpg" /></div>
+<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/overview.jpg" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -217,7 +222,7 @@ Quad-microphone expansion board for Raspberry Pi designed for more powerful AI a
 
 Raspberry Pi does not include a hardware analog-to-digital converter, so the external ADC (such as the MCP3008) plays an important role in converting continuous time-varying analog signals into discrete-time digital signals so that they can easily be read by the digital devices.
 
-<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/p/e/perspective_1_1.jpg" /></div>
+<div align="center"><img width="500" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/p/e/perspective_1_1.jpg" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/8-Channel-12-Bit-ADC-for-Raspberry-Pi-STM32F030.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -225,7 +230,7 @@ Raspberry Pi does not include a hardware analog-to-digital converter, so the ext
 
 This shield is a 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD), supports the CAN FD protocol and supports transmission speed up to 8 Mbps.
 
-<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/103990563_preview-07.png" /></div>
+<div align="center"><img width="500" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/103990563_preview-07.png" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/CAN-BUS-FD-HAT-for-Raspberry-Pi-p-4742.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -235,7 +240,7 @@ This shield is a 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD), supp
 
 Constructed from military grade aluminum and hardwearing acrylic, this box is stackable in all three dimensions, allowing for limitless expansion possibilities. This will be Compatible With: CM4.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/img/Pic_2100.bmp" /></div>
+<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/img/Pic_2100.bmp" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/Skeleton-Box-for-Raspberry-Pi-Compute-Module.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -243,7 +248,7 @@ Constructed from military grade aluminum and hardwearing acrylic, this box is st
 
 Provides all the basic elements you need to collect and transfer data from all your LoRa nodes. Build your IOT prototype within minutes. This will be Compatible With: 3B+,4B.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Skeleton_box_for_Rasberry_Pi/img/Pi_skeleton_02.jpg" /></div>
+<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Skeleton_box_for_Rasberry_Pi/img/Pi_skeleton_02.jpg" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/Skeleton-box-for-Raspberry-Pi.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -251,7 +256,7 @@ Provides all the basic elements you need to collect and transfer data from all y
 
 An easy to assemble clear acryllic case, made using a better-performing 4-piece design over the standard 6-piece.This will be Compatible With: 3B+.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Raspberry_PI_Bplus_Case/img/IMG_9955b.jpg" /></div>
+<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Raspberry_PI_Bplus_Case/img/IMG_9955b.jpg" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/Raspberry-Pi-Model-B-2-Case.html?queryID=f4fedf9ea695b42efea237236cb2a0ab&objectID=1036&indexName=bazaar_retailer_products" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -260,7 +265,7 @@ An easy to assemble clear acryllic case, made using a better-performing 4-piece 
 
 The first water cooling kit specially designed for Raspberry Pi 5, which is a collaborative product released by Seeed Studio and 52Pi, can control the temperature of a single fully loaded Raspberry Pi 5 at about 40℃. Each water cooling kit is capable of simultaneously cooling multiple Raspberry Pi 5 units, offering a cooling solution for Raspberry Pi 5 cluster management.
 
-<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/6/-/6-110070128-high-performance-liquid-cooler-for-raspberry-pi-5-feature.jpg" /></div>
+<div align="center"><img width="500" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/6/-/6-110070128-high-performance-liquid-cooler-for-raspberry-pi-5-feature.jpg" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/High-Performance-Liquid-Cooler-for-Raspberry-Pi-5-p-5854.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -268,7 +273,7 @@ The first water cooling kit specially designed for Raspberry Pi 5, which is a co
 
 Raspberry Pi Active Cooler is an official accessory designed for the Raspberry Pi 5, providing an alternative cooling solution for sustained heavy load usage without a case. It combines a large metal heatsink with a variable-speed blower, powered and controlled via the fan connector.
 
-<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993229-active-cooler-first.jpg" /></div>
+<div align="center"><img width="500" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993229-active-cooler-first.jpg" /></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/Raspberry-Pi-Active-Cooler-p-5813.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
 
@@ -276,6 +281,6 @@ Raspberry Pi Active Cooler is an official accessory designed for the Raspberry P
 
 The ICE Tower CPU Cooling Fan is designed for Raspberry Pi 5 and provides efficient cooling to enhance the performance and longevity of the device.
 
-<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/6/-/6-114070241-ice-tower-cooler-for-raspberry-pi5-feature.jpg"></div>
+<div align="center"><img width="500" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/6/-/6-114070241-ice-tower-cooler-for-raspberry-pi5-feature.jpg"></div>
 
 <p align="center"><a href="https://www.seeedstudio.com/ICE-Tower-CPU-Cooling-Fan-for-Raspberry-Pi-Support-Pi-5-p-5814.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
