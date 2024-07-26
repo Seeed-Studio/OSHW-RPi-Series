@@ -165,7 +165,7 @@ Do you want to explore more?
 The Raspberry Pi AI Kit bundles the Raspberry Pi M.2 HAT+ with a Hailo AI acceleration module for use with Raspberry Pi 5. It provides an accessible, cost-effective, and powerefficient way to integrate high-performance AI. Explore applications including process control, security, home automation, and robotics.
 
 <div align="center">
-  <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113050086-raspberry-pi-ai-kit-all.jpg" width="500" />
+  <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" width="500" />
 </div>
 
 <p align="center"><a href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
