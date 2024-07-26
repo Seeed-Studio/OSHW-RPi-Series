@@ -42,7 +42,7 @@ git clone https://github.com/LJ-Hao/Pose-Based_Light_Control_with_Node-Red_and_R
 2. Edit the `pose_estimation.py` file and change the `mqtt_server` to your reTerminal DM's IP address. And change the Gstreamer pipeline to your reTerminal DM's IP address. And then run the command below to start the pose estimation.
 
 ```shell
-bash run.sh pose_estimation.py
+bash run.sh
 ```
 ## Run Node-RED flow
 
