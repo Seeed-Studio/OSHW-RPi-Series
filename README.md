@@ -36,7 +36,7 @@ Introducing reTerminal DM, a 10.1" open-source industrial Human-Machine Interfac
 
 The reComputer R1000 is a high-performance, cost-effective edge IoT controller based on Raspberry Pi. It has dual Ethernet interfaces, three isolated RS485 interfaces, and supports Modbus UDP/TCP and BACnet protocols, making it ideal for smart building and energy management, including HVAC, lighting, sensors, and access control. It also offers extensive wireless capabilities, including 4G, LoRa®, Zigbee, Wi-Fi, and BLE.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" /></div>
+<img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" width="600" />
 
 
 <p align="center"><a href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank"><b><strong>🖱️ Buy Now</strong></b></a></p>
