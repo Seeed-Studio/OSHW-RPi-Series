@@ -76,7 +76,7 @@ sudo dpkg -i homeassistant-supervised.deb
 
 Upon successful correction, a blue screen will appear, allowing you to select **Raspberry Pi4 64** model.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/bluescreen.png" width="600"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/bluescreen.png" width="600"/></div>
 
 After a few minutes, the installation will begin.
 
@@ -84,8 +84,9 @@ You can then view the Home Assistant Dashboard UI on a web browser using `<your_
 
 It will take some time to finish the initial startup process. Once it has finished starting up, create an account and follow the initial setup instructions
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" width="600"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" width="600"/></div>
 
-:::note
-If there are warnings in notifications, please reboot the reComputer.
-:::
+> [!NOTE]
+> If there are warnings in notifications, please reboot the reComputer.
+
+
