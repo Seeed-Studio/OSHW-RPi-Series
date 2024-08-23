@@ -31,4 +31,4 @@ pip install opencv-python
 pip install paho-mqtt
 
 
-python3 pose-estimation.py -i /dev/video0
+python3 pose-estimation.py -i /dev/video0 -f
